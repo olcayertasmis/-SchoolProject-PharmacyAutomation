@@ -16,5 +16,48 @@ namespace Eczane_Otomasyonu
         {
             InitializeComponent();
         }
+
+        private void BtnGüncelle_Click(object sender, EventArgs e)
+        {
+            string tc = Convert.ToString(TbTc.Text);
+            Personel_Islemleri pe = new Personel_Islemleri();
+            //pe.personelGuncelle(id, tc, TbAd.Text, TbSoyad.Text);
+            dataGridView1.DataSource = pe.tablolar();
+        }
+
+        private void BtnKaydet_Click(object sender, EventArgs e)
+        {
+            Personel_Islemleri pe = new Personel_Islemleri();
+            pe.ekle(TbTc.Text, TbAd.Text, TbSoyad.Text);
+            dataGridView1.DataSource = pe.tablolar();
+        }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            string tc = Convert.ToString(TbTc.Text);
+            Personel_Islemleri pe = new Personel_Islemleri();
+            pe.personelSil(tc);
+            dataGridView1.DataSource = pe.tablolar();
+        }
+
+        private void PersonelEkran_Load(object sender, EventArgs e)
+        {
+            Personel_Islemleri me = new Personel_Islemleri();
+            dataGridView1.DataSource = me.tablolar();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                TbTc.Text = dataGridView1.Rows[e.RowIndex].Cells["tcno"].Value.ToString();
+                TbAd.Text = dataGridView1.Rows[e.RowIndex].Cells["adi"].Value.ToString();
+                TbSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells["soyadi"].Value.ToString();
+            }
+            catch
+            {
+
+            }
+        }
     }
 }

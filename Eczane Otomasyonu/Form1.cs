@@ -29,11 +29,8 @@ namespace Eczane_Otomasyonu
             {
                 grs.girisYap(TbKullaniciadi.Text, TbSifre.Text);
                 string bilgiTut = TbKullaniciadi.Text + "" + TbSifre.Text.ToString();
-                MessageBox.Show(grs.girisDurumu);
-                MessageBox.Show(bilgiTut);
                 if (grs.girisDurumu == bilgiTut)
                 {
-                    MessageBox.Show("doğru girdin.", "Hata | Eczane Otomasyonu ", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     frm.Show();
                     this.Hide();
                 }
