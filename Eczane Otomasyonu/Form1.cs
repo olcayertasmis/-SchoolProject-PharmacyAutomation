@@ -41,5 +41,10 @@ namespace Eczane_Otomasyonu
         {
 
         }
+
+        private void TbKullaniciadi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

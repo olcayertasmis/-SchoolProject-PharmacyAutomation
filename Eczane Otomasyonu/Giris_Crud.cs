@@ -41,7 +41,7 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Close();
             }
         }
-        public void loginGuncelle(string girispanelID,string kullaniciadi, string parola)
+        public void loginGuncelle(string girispanelID, string kullaniciadi, string parola)
         {
             if (db.baglanti.State == ConnectionState.Open)
                 db.baglanti.Close();
@@ -140,6 +140,4 @@ namespace Eczane_Otomasyonu
         }
     }
 }
-
-    }
 

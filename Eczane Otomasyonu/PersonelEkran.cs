@@ -19,16 +19,19 @@ namespace Eczane_Otomasyonu
 
         private void BtnGüncelle_Click(object sender, EventArgs e)
         {
-            string tc = Convert.ToString(TbTc.Text);
             Personel_Islemleri pe = new Personel_Islemleri();
-            //pe.personelGuncelle(id, tc, TbAd.Text, TbSoyad.Text);
+            int satir = dataGridView1.CurrentRow.Index;
+            string id = dataGridView1.Rows[satir].Cells["personelID"].Value.ToString();
+            string idGiris = dataGridView1.Rows[satir].Cells["girispanelID"].Value.ToString();
+            string tc = Convert.ToString(TbTc.Text);
+            pe.personelGuncelle(tc, id, TbAd.Text, TbSoyad.Text, TbKullanici.Text, TbParola.Text, idGiris);
             dataGridView1.DataSource = pe.tablolar();
         }
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             Personel_Islemleri pe = new Personel_Islemleri();
-            pe.ekle(TbTc.Text, TbAd.Text, TbSoyad.Text);
+            pe.ekle(TbTc.Text, TbAd.Text, TbSoyad.Text, TbKullanici.Text, TbParola.Text);
             dataGridView1.DataSource = pe.tablolar();
         }
 
@@ -46,18 +49,19 @@ namespace Eczane_Otomasyonu
             dataGridView1.DataSource = me.tablolar();
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                TbTc.Text = dataGridView1.Rows[e.RowIndex].Cells["tcno"].Value.ToString();
-                TbAd.Text = dataGridView1.Rows[e.RowIndex].Cells["adi"].Value.ToString();
-                TbSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells["soyadi"].Value.ToString();
+                TbTc.Text = dataGridView1.Rows[e.RowIndex].Cells["tc"].Value.ToString();
+                TbAd.Text = dataGridView1.Rows[e.RowIndex].Cells["ad"].Value.ToString();
+                TbSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells["soyad"].Value.ToString();
             }
             catch
             {
 
             }
+
         }
     }
 }

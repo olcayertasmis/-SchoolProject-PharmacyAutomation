@@ -45,6 +45,7 @@ namespace Eczane_Otomasyonu
             this.TbKullaniciadi.Name = "TbKullaniciadi";
             this.TbKullaniciadi.Size = new System.Drawing.Size(141, 22);
             this.TbKullaniciadi.TabIndex = 0;
+            this.TbKullaniciadi.TextChanged += new System.EventHandler(this.TbKullaniciadi_TextChanged);
             // 
             // pictureBox1
             // 
