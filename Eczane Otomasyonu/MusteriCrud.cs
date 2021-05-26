@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 
-
 namespace Eczane_Otomasyonu
 {
-    class Giris_Crud
+    class MusteriCrud
     {
-
         Database db = new Database();
         public string durum { get; set; }
         public string sil_durum { get; set; }
@@ -24,7 +22,7 @@ namespace Eczane_Otomasyonu
             try
             {
                 db.baglanti.Open();
-                SqlCommand veriAl = new SqlCommand("select * from GirisPaneli", db.baglanti);
+                SqlCommand veriAl = new SqlCommand("select * from musteri", db.baglanti);
                 SqlDataAdapter da = new SqlDataAdapter(veriAl);
                 DataTable tablo = new DataTable();
                 da.Fill(tablo);
@@ -41,18 +39,23 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Close();
             }
         }
-        public void loginGuncelle(string girispanelID, string kullaniciadi, string parola)
+        public void musteriGuncelle(string tc, string id, string adi, string soyadi, string telefon, string adres)
         {
             if (db.baglanti.State == ConnectionState.Open)
                 db.baglanti.Close();
             try
             {
                 db.baglanti.Open();
-                SqlCommand guncelle = new SqlCommand("update GirisPaneli set kullaniciadi=@kullaniciadi,parola=@parola where girispanelID=@girispanelID ", db.baglanti);
-                guncelle.Parameters.AddWithValue("@kullaniciadi", kullaniciadi);
-                guncelle.Parameters.AddWithValue("@parola", parola);
-                guncelle.Parameters.AddWithValue("@girispanelID", girispanelID);
+                SqlCommand guncelle = new SqlCommand("update musteri set musteri_ad=@adi, musteri_soyad=@soyadi, tel=@telefon, adres=@adres,musteri_tc=@tc where musteri_id=@id ", db.baglanti);
+                guncelle.Parameters.AddWithValue("@adi", adi);
+                guncelle.Parameters.AddWithValue("@soyadi", soyadi);
+                guncelle.Parameters.AddWithValue("@tc", tc);
+                guncelle.Parameters.AddWithValue("@id", id);
+                guncelle.Parameters.AddWithValue("@telefon", telefon);
+                guncelle.Parameters.AddWithValue("@adres", adres);
                 guncelle.ExecuteNonQuery();
+                durum = adi + "  " + soyadi + " İSİMLİ KİŞİNİN VERİLERİ GÜNCELLENDİ ";
+                System.Windows.Forms.MessageBox.Show(durum, "Bilgi", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
                 db.baglanti.Close();
             }
             catch
@@ -63,7 +66,7 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Close();
             }
         }
-        public void personelSil(string tc)
+        public void musteriSil(string id)
         {
             if (db.baglanti.State == ConnectionState.Open)
             {
@@ -72,8 +75,8 @@ namespace Eczane_Otomasyonu
             try
             {
                 db.baglanti.Open();
-                SqlCommand sil = new SqlCommand("delete Personeller where tc=@tc", db.baglanti);
-                sil.Parameters.AddWithValue("@tc", tc);
+                SqlCommand sil = new SqlCommand("delete musteri where musteri_id=@id", db.baglanti);
+                sil.Parameters.AddWithValue("@id", id);
                 sil.ExecuteNonQuery();
                 sil_durum = "Silme işlemi gerçekleştirildi.";
             }
@@ -85,7 +88,7 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Close();
             }
         }
-        public DataTable personelAra(string tc)
+        public DataTable musteriAra(string tc)
         {
             if (db.baglanti.State == ConnectionState.Open)
             {
@@ -94,7 +97,7 @@ namespace Eczane_Otomasyonu
             try
             {
                 db.baglanti.Open();
-                SqlCommand ara = new SqlCommand("select * from Personeller where where tc=@tc ", db.baglanti);
+                SqlCommand ara = new SqlCommand("select * from calisanlar where TC=@tc ", db.baglanti);
                 ara.Parameters.AddWithValue("@tc", tc);
                 SqlDataAdapter da = new SqlDataAdapter(ara);
                 DataTable tablo = new DataTable();
@@ -110,7 +113,7 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Close();
             }
         }
-        public void ekle(string tc, string adi, string soyadi)
+        public void ekle(string tc, string adi, string soyadi, string telefon, string adres)
         {
             if (db.baglanti.State == System.Data.ConnectionState.Open)
             {
@@ -119,14 +122,14 @@ namespace Eczane_Otomasyonu
             try
             {
                 db.baglanti.Open();
-                //SqlCommand ekle = new SqlCommand("insert into Personeller(tc, ad, soyad) values(@tc, @adi, @soyadi)", db.baglanti);
-                SqlCommand ekle = new SqlCommand("insert into Personeller values(@tc,@adi,@soyadi,@girisID)", db.baglanti);
-                ekle.Parameters.AddWithValue("@tc", tc);
-                ekle.Parameters.AddWithValue("@adi", adi);
-                ekle.Parameters.AddWithValue("@soyadi", soyadi);
-                ekle.Parameters.AddWithValue("@girisID", 1);
+                SqlCommand ekle = new SqlCommand("insert into musteri values(@musteri_tc, @musteri_adi, @musteri_soyadi, @tel, @adres)", db.baglanti);
+                ekle.Parameters.AddWithValue("@musteri_tc", tc);
+                ekle.Parameters.AddWithValue("@musteri_adi", adi);
+                ekle.Parameters.AddWithValue("@musteri_soyadi", soyadi);
+                ekle.Parameters.AddWithValue("@tel", telefon);
+                ekle.Parameters.AddWithValue("@adres", adres);
                 ekle.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("Personel kayıdı, başarılı bir şekilde oluşmuştur...", "Bilgi", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                System.Windows.Forms.MessageBox.Show("Müşteri kayıdı, başarılı bir şekilde oluşmuştur...", "Bilgi", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
                 ekle.Dispose();
             }
             catch (Exception hata)
@@ -140,4 +143,3 @@ namespace Eczane_Otomasyonu
         }
     }
 }
-

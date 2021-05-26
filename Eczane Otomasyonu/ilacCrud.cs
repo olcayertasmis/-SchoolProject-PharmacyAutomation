@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Eczane_Otomasyonu
 {
-    class Personel_Islemleri
+    class ilacCrud
     {
         Database db = new Database();
         public string durum { get; set; }
@@ -22,7 +22,7 @@ namespace Eczane_Otomasyonu
             try
             {
                 db.baglanti.Open();
-                SqlCommand veriAl = new SqlCommand("select * from calisanlar", db.baglanti);
+                SqlCommand veriAl = new SqlCommand("select * from ilaclar", db.baglanti);
                 SqlDataAdapter da = new SqlDataAdapter(veriAl);
                 DataTable tablo = new DataTable();
                 da.Fill(tablo);
@@ -39,7 +39,7 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Close();
             }
         }
-        public void personelGuncelle(string tc, string id, string adi, string soyadi, string kullaniciadi, string parola)
+        public void ilacGuncelle(string id, string ilac_adi, string soyadi, string kullaniciadi, string parola)
         {
             if (db.baglanti.State == ConnectionState.Open)
                 db.baglanti.Close();
@@ -47,14 +47,13 @@ namespace Eczane_Otomasyonu
             {
                 db.baglanti.Open();
                 SqlCommand guncelle = new SqlCommand("update calisanlar set calisan_adi=@adi,calisan_soyadi=@soyadi,kullanici_adi=@kullaniciadi,parola=@parola,TC=@tc where calisan_id=@id ", db.baglanti);
-                guncelle.Parameters.AddWithValue("@adi", adi);
+                guncelle.Parameters.AddWithValue("@adi", ilac_adi);
                 guncelle.Parameters.AddWithValue("@soyadi", soyadi);
-                guncelle.Parameters.AddWithValue("@tc", tc);
                 guncelle.Parameters.AddWithValue("@id", id);
                 guncelle.Parameters.AddWithValue("@kullaniciadi", kullaniciadi);
                 guncelle.Parameters.AddWithValue("@parola", parola);
                 guncelle.ExecuteNonQuery();
-                durum = adi + "  " + soyadi + " İSİMLİ KİŞİNİN VERİLERİ GÜNCELLENDİ ";
+                //durum = adi + "  " + soyadi + " İSİMLİ KİŞİNİN VERİLERİ GÜNCELLENDİ ";
                 System.Windows.Forms.MessageBox.Show(durum, "Bilgi", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
                 db.baglanti.Close();
             }

@@ -28,13 +28,13 @@ namespace Eczane_Otomasyonu
             try
             {
                 db.baglanti.Open();
-                SqlCommand loginName = new SqlCommand("select kullaniciadi from GirisPaneli where kullaniciadi=@kulAdi", db.baglanti);
+                SqlCommand loginName = new SqlCommand("select kullanici_adi from calisanlar where kullanici_adi=@kulAdi", db.baglanti);
                 loginName.Parameters.AddWithValue("@kulAdi", kullanıcı_adi);
                 SqlDataReader kulAdi_Oku = loginName.ExecuteReader();
                 if (kulAdi_Oku.Read())
                 {
-                    kullaniciAdi_tut = kulAdi_Oku["kullaniciadi"].ToString();
-                    SqlCommand loginPw = new SqlCommand("select parola from GirisPaneli where parola = @sifre", db.baglanti);
+                    kullaniciAdi_tut = kulAdi_Oku["kullanici_adi"].ToString();
+                    SqlCommand loginPw = new SqlCommand("select parola from calisanlar where parola = @sifre", db.baglanti);
                     loginPw.Parameters.AddWithValue("@sifre", kullanıcı_sifre);
                     SqlDataReader loginPw_Oku = loginPw.ExecuteReader();
                     if (loginPw_Oku.Read())

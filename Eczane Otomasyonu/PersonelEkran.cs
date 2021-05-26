@@ -21,10 +21,9 @@ namespace Eczane_Otomasyonu
         {
             Personel_Islemleri pe = new Personel_Islemleri();
             int satir = dataGridView1.CurrentRow.Index;
-            string id = dataGridView1.Rows[satir].Cells["personelID"].Value.ToString();
-            string idGiris = dataGridView1.Rows[satir].Cells["girispanelID"].Value.ToString();
+            string id = dataGridView1.Rows[satir].Cells["calisan_id"].Value.ToString();
             string tc = Convert.ToString(TbTc.Text);
-            pe.personelGuncelle(tc, id, TbAd.Text, TbSoyad.Text, TbKullanici.Text, TbParola.Text, idGiris);
+            pe.personelGuncelle(tc, id, TbAd.Text, TbSoyad.Text, TbKullanici.Text, TbParola.Text);
             dataGridView1.DataSource = pe.tablolar();
         }
 
@@ -37,9 +36,10 @@ namespace Eczane_Otomasyonu
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
-            string tc = Convert.ToString(TbTc.Text);
+            int satir = dataGridView1.CurrentRow.Index;
+            string id = dataGridView1.Rows[satir].Cells["calisan_id"].Value.ToString();
             Personel_Islemleri pe = new Personel_Islemleri();
-            pe.personelSil(tc);
+            pe.personelSil(id);
             dataGridView1.DataSource = pe.tablolar();
         }
 
@@ -53,9 +53,11 @@ namespace Eczane_Otomasyonu
         {
             try
             {
-                TbTc.Text = dataGridView1.Rows[e.RowIndex].Cells["tc"].Value.ToString();
-                TbAd.Text = dataGridView1.Rows[e.RowIndex].Cells["ad"].Value.ToString();
-                TbSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells["soyad"].Value.ToString();
+                TbTc.Text = dataGridView1.Rows[e.RowIndex].Cells["TC"].Value.ToString();
+                TbAd.Text = dataGridView1.Rows[e.RowIndex].Cells["calisan_adi"].Value.ToString();
+                TbSoyad.Text = dataGridView1.Rows[e.RowIndex].Cells["calisan_soyadi"].Value.ToString();
+                TbKullanici.Text = dataGridView1.Rows[e.RowIndex].Cells["kullanici_adi"].Value.ToString();
+                TbParola.Text = dataGridView1.Rows[e.RowIndex].Cells["parola"].Value.ToString();
             }
             catch
             {

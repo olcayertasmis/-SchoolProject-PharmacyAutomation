@@ -80,13 +80,13 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Giris.cs" />
-    <Compile Include="Giris_Crud.cs" />
     <Compile Include="HastaEkran.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HastaEkran.Designer.cs">
       <DependentUpon>HastaEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="ilacCrud.cs" />
     <Compile Include="IlacEkran.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +99,7 @@
     <Compile Include="LogEkran.Designer.cs">
       <DependentUpon>LogEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="MusteriCrud.cs" />
     <Compile Include="PersonelEkran.cs">
       <SubType>Form</SubType>
     </Compile>
