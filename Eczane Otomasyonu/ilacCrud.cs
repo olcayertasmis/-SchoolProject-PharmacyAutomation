@@ -22,7 +22,9 @@ namespace Eczane_Otomasyonu
             try
             {
                 db.baglanti.Open();
-                SqlCommand veriAl = new SqlCommand("select * from ilaclar", db.baglanti);
+                //select * from ilaclar inner join ilac_turleri on ilaclar.tur_id= ilac_turleri.tur_ismi
+                //("select ilaclar.ilac_id,ilaclar.ilac_ismi,ilac_turleri.tur_ismi,ilaclar.uretim_tarihi,ilaclar.tuketim_tarihi,ilaclar.fiyat,ilaclar.stok from ilaclar inner join ilac_turleri on ilaclar.tur_id=ilac_turleri.tur_id")
+                SqlCommand veriAl = new SqlCommand("select ilaclar.ilac_id,ilaclar.ilac_ismi,ilac_turleri.tur_ismi,ilaclar.uretim_tarihi,ilaclar.tuketim_tarihi,ilaclar.fiyat,ilaclar.stok,ilac_turleri.tur_id from ilaclar inner join ilac_turleri on ilaclar.tur_id=ilac_turleri.tur_id", db.baglanti);
                 SqlDataAdapter da = new SqlDataAdapter(veriAl);
                 DataTable tablo = new DataTable();
                 da.Fill(tablo);
@@ -65,7 +67,7 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Close();
             }
         }
-        public void personelSil(string id)
+        public void ilacSil(string id)
         {
             if (db.baglanti.State == ConnectionState.Open)
             {
@@ -74,7 +76,7 @@ namespace Eczane_Otomasyonu
             try
             {
                 db.baglanti.Open();
-                SqlCommand sil = new SqlCommand("delete calisanlar where calisan_id=@id", db.baglanti);
+                SqlCommand sil = new SqlCommand("delete ilaclar where ilac_id=@id", db.baglanti);
                 sil.Parameters.AddWithValue("@id", id);
                 sil.ExecuteNonQuery();
                 sil_durum = "Silme işlemi gerçekleştirildi.";
@@ -112,7 +114,7 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Close();
             }
         }
-        public void ekle(string tc, string adi, string soyadi, string kullaniciadi, string parola)
+        public void ekle(string ilac_adi, float fiyat, string stok, string tur, DateTime uretimTarihi, DateTime tuketimTarihi)
         {
             if (db.baglanti.State == System.Data.ConnectionState.Open)
             {
@@ -121,14 +123,14 @@ namespace Eczane_Otomasyonu
             try
             {
                 db.baglanti.Open();
+                SqlCommand turVarmi = new SqlCommand("select tur_id from ilac_turleri where tur_ismi=@");
                 SqlCommand ekle = new SqlCommand("insert into calisanlar values(@calisan_adi, @calisan_soyadi, @kullaniciadi, @parola, @yoneticimi, @tc)", db.baglanti);
                 //SqlCommand ekle = new SqlCommand("insert into Personeller values(@tc,@adi,@soyadi,@girisID)", db.baglanti);
-                ekle.Parameters.AddWithValue("@tc", tc);
-                ekle.Parameters.AddWithValue("@calisan_adi", adi);
-                ekle.Parameters.AddWithValue("@calisan_soyadi", soyadi);
-                ekle.Parameters.AddWithValue("@kullaniciadi", kullaniciadi);
-                ekle.Parameters.AddWithValue("@parola", parola);
-                ekle.Parameters.AddWithValue("@yoneticimi", 0);
+                ekle.Parameters.AddWithValue("@tc", ilac_adi);
+                ekle.Parameters.AddWithValue("@calisan_adi", fiyat);
+                ekle.Parameters.AddWithValue("@calisan_soyadi", stok);
+                ekle.Parameters.AddWithValue("@kullaniciadi", uretimTarihi);
+                ekle.Parameters.AddWithValue("@parola", tuketimTarihi);
                 ekle.ExecuteNonQuery();
                 System.Windows.Forms.MessageBox.Show("Çalışan kayıdı, başarılı bir şekilde oluşmuştur...", "Bilgi", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
                 ekle.Dispose();
