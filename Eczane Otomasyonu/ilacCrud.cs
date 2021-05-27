@@ -114,7 +114,7 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Close();
             }
         }
-        public void ekle(string ilac_adi, float fiyat, string stok, string tur, DateTime uretimTarihi, DateTime tuketimTarihi)
+        public void ekle(string ilac_adi, float fiyat, string stok, int tur_id, DateTime uretimTarihi, DateTime tuketimTarihi)
         {
             if (db.baglanti.State == System.Data.ConnectionState.Open)
             {
@@ -123,9 +123,7 @@ namespace Eczane_Otomasyonu
             try
             {
                 db.baglanti.Open();
-                SqlCommand turVarmi = new SqlCommand("select tur_id from ilac_turleri where tur_ismi=@");
-                SqlCommand ekle = new SqlCommand("insert into calisanlar values(@calisan_adi, @calisan_soyadi, @kullaniciadi, @parola, @yoneticimi, @tc)", db.baglanti);
-                //SqlCommand ekle = new SqlCommand("insert into Personeller values(@tc,@adi,@soyadi,@girisID)", db.baglanti);
+                SqlCommand ekle = new SqlCommand("insert into ilaclar values(@ilac_adi, @fiyat, @kullaniciadi, @parola, @yoneticimi, @tc)", db.baglanti);
                 ekle.Parameters.AddWithValue("@tc", ilac_adi);
                 ekle.Parameters.AddWithValue("@calisan_adi", fiyat);
                 ekle.Parameters.AddWithValue("@calisan_soyadi", stok);

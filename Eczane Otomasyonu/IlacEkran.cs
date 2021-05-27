@@ -41,8 +41,8 @@ namespace Eczane_Otomasyonu
         {
             ilacCrud ic = new ilacCrud();
             float deger = int.Parse(TbFiyat.Text);
-            string tur = CbilacTur.SelectedItem.ToString();
-            ic.ekle(TbAd.Text, deger, TbAdet.Text, tur, DtUretim.Value, DtSonKullanim.Value);
+            //string tur = CbilacTur.SelectedItem.ToString();
+            ic.ekle(TbAd.Text, deger, TbAdet.Text, CbilacTur.SelectedIndex, DtUretim.Value, DtSonKullanim.Value);
             dataGridView1.DataSource = ic.tablolar();
         }
         private void TbFiyat_KeyPress(object sender, KeyPressEventArgs e)
