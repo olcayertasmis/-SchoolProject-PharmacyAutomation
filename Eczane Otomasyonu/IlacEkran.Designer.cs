@@ -47,9 +47,9 @@ namespace Eczane_Otomasyonu
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CbilacTur = new System.Windows.Forms.ComboBox();
-            this.BtnTurEkle = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.BtnTurEkle = new System.Windows.Forms.Button();
+            this.CbilacTur = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -61,62 +61,66 @@ namespace Eczane_Otomasyonu
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(839, 183);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.Location = new System.Drawing.Point(681, 539);
+            this.BtnKaydet.Location = new System.Drawing.Point(681, 572);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(107, 44);
+            this.BtnKaydet.Size = new System.Drawing.Size(170, 77);
             this.BtnKaydet.TabIndex = 18;
             this.BtnKaydet.Text = "KAYDET";
             this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // BtnGüncelle
             // 
-            this.BtnGüncelle.Location = new System.Drawing.Point(526, 539);
+            this.BtnGüncelle.Location = new System.Drawing.Point(501, 572);
             this.BtnGüncelle.Name = "BtnGüncelle";
-            this.BtnGüncelle.Size = new System.Drawing.Size(111, 44);
+            this.BtnGüncelle.Size = new System.Drawing.Size(174, 77);
             this.BtnGüncelle.TabIndex = 17;
             this.BtnGüncelle.Text = "GÜNCELLE";
             this.BtnGüncelle.UseVisualStyleBackColor = true;
+            this.BtnGüncelle.Click += new System.EventHandler(this.BtnGüncelle_Click);
             // 
             // BtnSil
             // 
-            this.BtnSil.Location = new System.Drawing.Point(171, 539);
+            this.BtnSil.Location = new System.Drawing.Point(201, 572);
             this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(120, 44);
+            this.BtnSil.Size = new System.Drawing.Size(183, 77);
             this.BtnSil.TabIndex = 16;
             this.BtnSil.Text = "SİL";
             this.BtnSil.UseVisualStyleBackColor = true;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // TbAdet
             // 
-            this.TbAdet.Location = new System.Drawing.Point(160, 267);
+            this.TbAdet.Location = new System.Drawing.Point(161, 287);
             this.TbAdet.Name = "TbAdet";
-            this.TbAdet.Size = new System.Drawing.Size(100, 22);
+            this.TbAdet.Size = new System.Drawing.Size(163, 22);
             this.TbAdet.TabIndex = 15;
             // 
             // TbFiyat
             // 
-            this.TbFiyat.Location = new System.Drawing.Point(160, 230);
+            this.TbFiyat.Location = new System.Drawing.Point(161, 250);
             this.TbFiyat.Name = "TbFiyat";
-            this.TbFiyat.Size = new System.Drawing.Size(100, 22);
+            this.TbFiyat.Size = new System.Drawing.Size(163, 22);
             this.TbFiyat.TabIndex = 14;
             this.TbFiyat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbFiyat_KeyPress);
             // 
             // TbAd
             // 
-            this.TbAd.Location = new System.Drawing.Point(160, 195);
+            this.TbAd.Location = new System.Drawing.Point(161, 215);
             this.TbAd.Name = "TbAd";
-            this.TbAd.Size = new System.Drawing.Size(100, 22);
+            this.TbAd.Size = new System.Drawing.Size(163, 22);
             this.TbAd.TabIndex = 13;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(35, 267);
+            this.label3.Location = new System.Drawing.Point(36, 287);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 17);
             this.label3.TabIndex = 12;
@@ -125,7 +129,7 @@ namespace Eczane_Otomasyonu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 235);
+            this.label2.Location = new System.Drawing.Point(36, 255);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 17);
             this.label2.TabIndex = 11;
@@ -134,7 +138,7 @@ namespace Eczane_Otomasyonu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(35, 201);
+            this.label1.Location = new System.Drawing.Point(36, 221);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 17);
             this.label1.TabIndex = 10;
@@ -142,9 +146,9 @@ namespace Eczane_Otomasyonu
             // 
             // BtnGeri
             // 
-            this.BtnGeri.Location = new System.Drawing.Point(12, 539);
+            this.BtnGeri.Location = new System.Drawing.Point(12, 572);
             this.BtnGeri.Name = "BtnGeri";
-            this.BtnGeri.Size = new System.Drawing.Size(120, 44);
+            this.BtnGeri.Size = new System.Drawing.Size(183, 77);
             this.BtnGeri.TabIndex = 19;
             this.BtnGeri.Text = "GERİ";
             this.BtnGeri.UseVisualStyleBackColor = true;
@@ -153,7 +157,7 @@ namespace Eczane_Otomasyonu
             // 
             this.TbYenilac.Location = new System.Drawing.Point(229, 107);
             this.TbYenilac.Name = "TbYenilac";
-            this.TbYenilac.Size = new System.Drawing.Size(121, 22);
+            this.TbYenilac.Size = new System.Drawing.Size(184, 22);
             this.TbYenilac.TabIndex = 21;
             // 
             // label4
@@ -167,22 +171,22 @@ namespace Eczane_Otomasyonu
             // 
             // DtUretim
             // 
-            this.DtUretim.Location = new System.Drawing.Point(496, 196);
+            this.DtUretim.Location = new System.Drawing.Point(497, 216);
             this.DtUretim.Name = "DtUretim";
-            this.DtUretim.Size = new System.Drawing.Size(272, 22);
+            this.DtUretim.Size = new System.Drawing.Size(335, 22);
             this.DtUretim.TabIndex = 22;
             // 
             // DtSonKullanim
             // 
-            this.DtSonKullanim.Location = new System.Drawing.Point(496, 235);
+            this.DtSonKullanim.Location = new System.Drawing.Point(497, 255);
             this.DtSonKullanim.Name = "DtSonKullanim";
-            this.DtSonKullanim.Size = new System.Drawing.Size(272, 22);
+            this.DtSonKullanim.Size = new System.Drawing.Size(335, 22);
             this.DtSonKullanim.TabIndex = 23;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(360, 201);
+            this.label5.Location = new System.Drawing.Point(361, 221);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 17);
             this.label5.TabIndex = 24;
@@ -191,7 +195,7 @@ namespace Eczane_Otomasyonu
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(360, 240);
+            this.label6.Location = new System.Drawing.Point(361, 260);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 17);
             this.label6.TabIndex = 25;
@@ -205,28 +209,11 @@ namespace Eczane_Otomasyonu
             this.groupBox1.Controls.Add(this.CbilacTur);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.TbYenilac);
-            this.groupBox1.Location = new System.Drawing.Point(432, 287);
+            this.groupBox1.Location = new System.Drawing.Point(432, 309);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(356, 211);
+            this.groupBox1.Size = new System.Drawing.Size(419, 244);
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
-            // 
-            // CbilacTur
-            // 
-            this.CbilacTur.FormattingEnabled = true;
-            this.CbilacTur.Location = new System.Drawing.Point(229, 39);
-            this.CbilacTur.Name = "CbilacTur";
-            this.CbilacTur.Size = new System.Drawing.Size(121, 24);
-            this.CbilacTur.TabIndex = 22;
-            // 
-            // BtnTurEkle
-            // 
-            this.BtnTurEkle.Location = new System.Drawing.Point(214, 173);
-            this.BtnTurEkle.Name = "BtnTurEkle";
-            this.BtnTurEkle.Size = new System.Drawing.Size(136, 32);
-            this.BtnTurEkle.TabIndex = 23;
-            this.BtnTurEkle.Text = "Yeni İlac Türü Ekle";
-            this.BtnTurEkle.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -237,11 +224,29 @@ namespace Eczane_Otomasyonu
             this.label7.TabIndex = 24;
             this.label7.Text = "YENİ İLAC TÜRÜ";
             // 
+            // BtnTurEkle
+            // 
+            this.BtnTurEkle.Location = new System.Drawing.Point(214, 173);
+            this.BtnTurEkle.Name = "BtnTurEkle";
+            this.BtnTurEkle.Size = new System.Drawing.Size(199, 65);
+            this.BtnTurEkle.TabIndex = 23;
+            this.BtnTurEkle.Text = "Yeni İlac Türü Ekle";
+            this.BtnTurEkle.UseVisualStyleBackColor = true;
+            this.BtnTurEkle.Click += new System.EventHandler(this.BtnTurEkle_Click);
+            // 
+            // CbilacTur
+            // 
+            this.CbilacTur.FormattingEnabled = true;
+            this.CbilacTur.Location = new System.Drawing.Point(229, 39);
+            this.CbilacTur.Name = "CbilacTur";
+            this.CbilacTur.Size = new System.Drawing.Size(184, 24);
+            this.CbilacTur.TabIndex = 22;
+            // 
             // IlacEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 595);
+            this.ClientSize = new System.Drawing.Size(870, 661);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -260,6 +265,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.dataGridView1);
             this.Name = "IlacEkran";
             this.Text = "IlacEkran";
+            this.Load += new System.EventHandler(this.IlacEkran_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

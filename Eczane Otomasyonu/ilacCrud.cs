@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Eczane_Otomasyonu
 {
@@ -22,8 +23,6 @@ namespace Eczane_Otomasyonu
             try
             {
                 db.baglanti.Open();
-                //select * from ilaclar inner join ilac_turleri on ilaclar.tur_id= ilac_turleri.tur_ismi
-                //("select ilaclar.ilac_id,ilaclar.ilac_ismi,ilac_turleri.tur_ismi,ilaclar.uretim_tarihi,ilaclar.tuketim_tarihi,ilaclar.fiyat,ilaclar.stok from ilaclar inner join ilac_turleri on ilaclar.tur_id=ilac_turleri.tur_id")
                 SqlCommand veriAl = new SqlCommand("select ilaclar.ilac_id,ilaclar.ilac_ismi,ilac_turleri.tur_ismi,ilaclar.uretim_tarihi,ilaclar.tuketim_tarihi,ilaclar.fiyat,ilaclar.stok,ilac_turleri.tur_id from ilaclar inner join ilac_turleri on ilaclar.tur_id=ilac_turleri.tur_id", db.baglanti);
                 SqlDataAdapter da = new SqlDataAdapter(veriAl);
                 DataTable tablo = new DataTable();
@@ -41,22 +40,26 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Close();
             }
         }
-        public void ilacGuncelle(string id, string ilac_adi, string soyadi, string kullaniciadi, string parola)
+        public void ilacGuncelle(string id, string ilac_adi, string tur, float fiyat, string stok, DateTime uretimTarihi, DateTime tuketimTarihi)
         {
             if (db.baglanti.State == ConnectionState.Open)
                 db.baglanti.Close();
             try
             {
                 db.baglanti.Open();
-                SqlCommand guncelle = new SqlCommand("update calisanlar set calisan_adi=@adi,calisan_soyadi=@soyadi,kullanici_adi=@kullaniciadi,parola=@parola,TC=@tc where calisan_id=@id ", db.baglanti);
-                guncelle.Parameters.AddWithValue("@adi", ilac_adi);
-                guncelle.Parameters.AddWithValue("@soyadi", soyadi);
+                SqlCommand turIdAl = new SqlCommand("select ilac_turleri.tur_id from ilac_turleri where tur_ismi=@turIsmi", db.baglanti);
+                turIdAl.Parameters.AddWithValue("@turIsmi", tur);
+                int tur_id = Convert.ToInt32(turIdAl.ExecuteScalar());
+                SqlCommand guncelle = new SqlCommand("update ilaclar set ilac_ismi= @ilac_adi,tur_id= @tur_id,uretim_tarihi= @uretimTarihi,tuketim_tarihi= @tuketimTarihi,fiyat= @fiyat,stok=@stok where ilac_id= @id ", db.baglanti);
+                guncelle.Parameters.AddWithValue("@ilac_adi", ilac_adi);
+                guncelle.Parameters.AddWithValue("@tur_id", tur_id);
                 guncelle.Parameters.AddWithValue("@id", id);
-                guncelle.Parameters.AddWithValue("@kullaniciadi", kullaniciadi);
-                guncelle.Parameters.AddWithValue("@parola", parola);
+                guncelle.Parameters.AddWithValue("@fiyat", fiyat);
+                guncelle.Parameters.AddWithValue("@stok", stok);
+                guncelle.Parameters.AddWithValue("@uretimTarihi", uretimTarihi);
+                guncelle.Parameters.AddWithValue("@tuketimTarihi", tuketimTarihi);
                 guncelle.ExecuteNonQuery();
-                //durum = adi + "  " + soyadi + " İSİMLİ KİŞİNİN VERİLERİ GÜNCELLENDİ ";
-                System.Windows.Forms.MessageBox.Show(durum, "Bilgi", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                System.Windows.Forms.MessageBox.Show(ilac_adi + " Adlı İlaç Güncellendi", "Bilgi", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
                 db.baglanti.Close();
             }
             catch
@@ -114,28 +117,57 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Close();
             }
         }
-        public void ekle(string ilac_adi, float fiyat, string stok, int tur_id, DateTime uretimTarihi, DateTime tuketimTarihi)
+        public void ekle(string ilac_adi, float fiyat, string stok, string tur, DateTime uretimTarihi, DateTime tuketimTarihi)
         {
-            if (db.baglanti.State == System.Data.ConnectionState.Open)
+            if (db.baglanti.State == ConnectionState.Open)
             {
                 db.baglanti.Close();
             }
             try
             {
                 db.baglanti.Open();
-                SqlCommand ekle = new SqlCommand("insert into ilaclar values(@ilac_adi, @fiyat, @kullaniciadi, @parola, @yoneticimi, @tc)", db.baglanti);
-                ekle.Parameters.AddWithValue("@tc", ilac_adi);
-                ekle.Parameters.AddWithValue("@calisan_adi", fiyat);
-                ekle.Parameters.AddWithValue("@calisan_soyadi", stok);
-                ekle.Parameters.AddWithValue("@kullaniciadi", uretimTarihi);
-                ekle.Parameters.AddWithValue("@parola", tuketimTarihi);
+                SqlCommand turIdAl = new SqlCommand("select ilac_turleri.tur_id from ilac_turleri where tur_ismi=@turIsmi", db.baglanti);
+                turIdAl.Parameters.AddWithValue("@turIsmi", tur);
+                int tur_id = Convert.ToInt32(turIdAl.ExecuteScalar());
+                SqlCommand ekle = new SqlCommand("insert into ilaclar values( @ilac_adi, @tur_id, @uretimTarihi, @tuketimTarihi, @fiyat, @stok)", db.baglanti);
+                ekle.Parameters.AddWithValue("@ilac_adi", ilac_adi);
+                ekle.Parameters.AddWithValue("@fiyat", fiyat);
+                ekle.Parameters.AddWithValue("@stok", stok);
+                ekle.Parameters.AddWithValue("@uretimTarihi", uretimTarihi);
+                ekle.Parameters.AddWithValue("@tuketimTarihi", tuketimTarihi);
+                ekle.Parameters.AddWithValue("@tur_id", tur_id);
                 ekle.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("Çalışan kayıdı, başarılı bir şekilde oluşmuştur...", "Bilgi", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                MessageBox.Show("İlaç kayıdı, başarılı bir şekilde oluşmuştur...", "İlaç Ekleme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ekle.Dispose();
             }
             catch (Exception hata)
             {
-                System.Windows.Forms.MessageBox.Show("" + hata);
+                MessageBox.Show("" + hata);
+            }
+            finally
+            {
+                db.baglanti.Close();
+            }
+        }
+        public void turEkle(string tur_adi)
+        {
+            if (db.baglanti.State == ConnectionState.Open)
+            {
+                db.baglanti.Close();
+            }
+            try
+            {
+                db.baglanti.Open();
+                SqlCommand tur_ekle = new SqlCommand("insert into ilac_turleri values(@ilac_türü)", db.baglanti);
+                tur_ekle.Parameters.AddWithValue("@ilac_türü", tur_adi);
+                tur_ekle.ExecuteNonQuery();
+
+                MessageBox.Show("İlaç Türü Eklendi !", "İşlem Başarılı | Eczane Otomasyonu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tur_ekle.Dispose();
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("İlaç Türü Eklenemedi ! " + hata, "İşlem Başarısız | Eczane Otomasyonu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
