@@ -16,5 +16,24 @@ namespace Eczane_Otomasyonu
         {
             InitializeComponent();
         }
+        PersonelEkran PersonelForm = new PersonelEkran();
+        private void BtnPersonel_Click(object sender, EventArgs e)
+        {
+            PersonelForm.Show();
+            this.Hide();
+        }
+
+        HastaEkran HastaForm = new HastaEkran();
+        private void BtnHasta_Click(object sender, EventArgs e)
+        {
+            HastaForm.Show();
+            this.Hide();
+        }
+        IlacEkran IlacForm = new IlacEkran();
+        private void BtnIlac_Click(object sender, EventArgs e)
+        {
+            IlacForm.Show();
+            this.Hide();
+        }
     }
 }

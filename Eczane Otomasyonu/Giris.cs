@@ -13,8 +13,7 @@ namespace Eczane_Otomasyonu
         Database db = new Database();
         public string kullaniciAdi_tut { get; set; }
         public string kullaniciSifre_tut { get; set; }
-
-
+        public Boolean yoneticimi_tut = false;
         public string girisDurumu { get; set; }
 
 
@@ -42,6 +41,17 @@ namespace Eczane_Otomasyonu
                         kullaniciSifre_tut = loginPw_Oku["parola"].ToString();
 
                         girisDurumu = kullaniciAdi_tut + "" + kullaniciSifre_tut;
+                        SqlCommand yonetici = new SqlCommand("select yoneticimi from calisanlar where kullanici_adi=@kulAdi", db.baglanti);
+                        yonetici.Parameters.AddWithValue("@kulAdi", kullanıcı_adi);
+                        SqlDataReader yonetici_Oku = yonetici.ExecuteReader();
+                        if (yonetici_Oku.Read())
+                        {
+                            yoneticimi_tut = true;
+                        }
+                        else
+                        {
+                            yoneticimi_tut = false;
+                        }
                     }
                     else
                     {

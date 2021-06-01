@@ -53,6 +53,7 @@ namespace Eczane_Otomasyonu
             this.BtnIlac.TabIndex = 1;
             this.BtnIlac.Text = "İlaç Bilgileri";
             this.BtnIlac.UseVisualStyleBackColor = true;
+            this.BtnIlac.Click += new System.EventHandler(this.BtnIlac_Click);
             // 
             // BtnHasta
             // 
@@ -62,6 +63,7 @@ namespace Eczane_Otomasyonu
             this.BtnHasta.TabIndex = 2;
             this.BtnHasta.Text = "Hasta Bilgileri";
             this.BtnHasta.UseVisualStyleBackColor = true;
+            this.BtnHasta.Click += new System.EventHandler(this.BtnHasta_Click);
             // 
             // label1
             // 
@@ -80,6 +82,7 @@ namespace Eczane_Otomasyonu
             this.BtnPersonel.TabIndex = 4;
             this.BtnPersonel.Text = "Personel Bilgileri";
             this.BtnPersonel.UseVisualStyleBackColor = true;
+            this.BtnPersonel.Click += new System.EventHandler(this.BtnPersonel_Click);
             // 
             // YoneticiEkran
             // 

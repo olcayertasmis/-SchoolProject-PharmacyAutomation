@@ -33,14 +33,13 @@ namespace Eczane_Otomasyonu
             this.lblFiyat = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.BtnSepetEkle = new System.Windows.Forms.Button();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.TbSoyad = new System.Windows.Forms.TextBox();
             this.TbAd = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblSoyad = new System.Windows.Forms.Label();
+            this.lblAd = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.BtnListeSil = new System.Windows.Forms.Button();
             this.lblToplamFiyat = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -51,18 +50,25 @@ namespace Eczane_Otomasyonu
             this.Cb_ilac = new System.Windows.Forms.ComboBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnSatisYap = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.BtnMusteriKaydet = new System.Windows.Forms.Button();
             this.TbAdres = new System.Windows.Forms.TextBox();
             this.TbTel = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblAdres = new System.Windows.Forms.Label();
+            this.lblTel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.LbUretim = new System.Windows.Forms.ListBox();
-            this.LbTuketim = new System.Windows.Forms.ListBox();
             this.LbFiyat = new System.Windows.Forms.ListBox();
+            this.LbTuketim = new System.Windows.Forms.ListBox();
+            this.LbUretim = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.LbAdet = new System.Windows.Forms.ListBox();
+            this.TbTcEkle = new System.Windows.Forms.TextBox();
+            this.lblTc = new System.Windows.Forms.Label();
+            this.BtnIptal = new System.Windows.Forms.Button();
+            this.Cb_islem = new System.Windows.Forms.ComboBox();
+            this.TbTc = new System.Windows.Forms.TextBox();
+            this.lbl_islem = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -105,16 +111,6 @@ namespace Eczane_Otomasyonu
             this.BtnSepetEkle.UseVisualStyleBackColor = true;
             this.BtnSepetEkle.Click += new System.EventHandler(this.BtnSepetEkle_Click);
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(1061, 107);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.maskedTextBox1.Mask = "00000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(112, 22);
-            this.maskedTextBox1.TabIndex = 98;
-            this.maskedTextBox1.TextChanged += new System.EventHandler(this.maskedTextBox1_TextChanged);
-            // 
             // TbSoyad
             // 
             this.TbSoyad.Location = new System.Drawing.Point(848, 107);
@@ -143,29 +139,29 @@ namespace Eczane_Otomasyonu
             this.label18.TabIndex = 93;
             this.label18.Text = "TC:";
             // 
-            // label17
+            // lblSoyad
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.label17.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label17.Location = new System.Drawing.Point(765, 106);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(69, 24);
-            this.label17.TabIndex = 92;
-            this.label17.Text = "Soyadı:";
+            this.lblSoyad.AutoSize = true;
+            this.lblSoyad.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
+            this.lblSoyad.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblSoyad.Location = new System.Drawing.Point(765, 106);
+            this.lblSoyad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSoyad.Name = "lblSoyad";
+            this.lblSoyad.Size = new System.Drawing.Size(69, 24);
+            this.lblSoyad.TabIndex = 92;
+            this.lblSoyad.Text = "Soyadı:";
             // 
-            // label16
+            // lblAd
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.label16.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label16.Location = new System.Drawing.Point(547, 106);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(43, 24);
-            this.label16.TabIndex = 91;
-            this.label16.Text = "Adı:";
+            this.lblAd.AutoSize = true;
+            this.lblAd.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
+            this.lblAd.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblAd.Location = new System.Drawing.Point(547, 106);
+            this.lblAd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAd.Name = "lblAd";
+            this.lblAd.Size = new System.Drawing.Size(43, 24);
+            this.lblAd.TabIndex = 91;
+            this.lblAd.Text = "Adı:";
             // 
             // label15
             // 
@@ -179,17 +175,18 @@ namespace Eczane_Otomasyonu
             this.label15.TabIndex = 90;
             this.label15.Text = "Müşteri Bilgisi";
             // 
-            // button3
+            // BtnListeSil
             // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(742, 524);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 53);
-            this.button3.TabIndex = 89;
-            this.button3.Text = "Listeyi Sil";
-            this.button3.UseVisualStyleBackColor = true;
+            this.BtnListeSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnListeSil.ForeColor = System.Drawing.Color.White;
+            this.BtnListeSil.Location = new System.Drawing.Point(742, 524);
+            this.BtnListeSil.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnListeSil.Name = "BtnListeSil";
+            this.BtnListeSil.Size = new System.Drawing.Size(178, 53);
+            this.BtnListeSil.TabIndex = 89;
+            this.BtnListeSil.Text = "Listeyi Sil";
+            this.BtnListeSil.UseVisualStyleBackColor = true;
+            this.BtnListeSil.Click += new System.EventHandler(this.btnListeSil_Click);
             // 
             // lblToplamFiyat
             // 
@@ -318,17 +315,18 @@ namespace Eczane_Otomasyonu
             this.label5.TabIndex = 71;
             this.label5.Text = "İlaç Seçiniz";
             // 
-            // button1
+            // BtnSatisYap
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(962, 524);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 53);
-            this.button1.TabIndex = 63;
-            this.button1.Text = "Siparişi Tamamla";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnSatisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSatisYap.ForeColor = System.Drawing.Color.White;
+            this.BtnSatisYap.Location = new System.Drawing.Point(962, 524);
+            this.BtnSatisYap.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnSatisYap.Name = "BtnSatisYap";
+            this.BtnSatisYap.Size = new System.Drawing.Size(184, 53);
+            this.BtnSatisYap.TabIndex = 63;
+            this.BtnSatisYap.Text = "Siparişi Tamamla";
+            this.BtnSatisYap.UseVisualStyleBackColor = true;
+            this.BtnSatisYap.Click += new System.EventHandler(this.btnSatısYap_Click);
             // 
             // pictureBox2
             // 
@@ -340,14 +338,15 @@ namespace Eczane_Otomasyonu
             this.pictureBox2.TabIndex = 59;
             this.pictureBox2.TabStop = false;
             // 
-            // button2
+            // BtnMusteriKaydet
             // 
-            this.button2.Location = new System.Drawing.Point(1051, 158);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 40);
-            this.button2.TabIndex = 105;
-            this.button2.Text = "Müşteri Kaydet";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BtnMusteriKaydet.Location = new System.Drawing.Point(1051, 203);
+            this.BtnMusteriKaydet.Name = "BtnMusteriKaydet";
+            this.BtnMusteriKaydet.Size = new System.Drawing.Size(122, 40);
+            this.BtnMusteriKaydet.TabIndex = 105;
+            this.BtnMusteriKaydet.Text = "Müşteri Kaydet";
+            this.BtnMusteriKaydet.UseVisualStyleBackColor = true;
+            this.BtnMusteriKaydet.Click += new System.EventHandler(this.btnMusteriKaydet_Click);
             // 
             // TbAdres
             // 
@@ -361,36 +360,38 @@ namespace Eczane_Otomasyonu
             // 
             this.TbTel.Location = new System.Drawing.Point(613, 167);
             this.TbTel.Margin = new System.Windows.Forms.Padding(4);
+            this.TbTel.MaxLength = 10;
             this.TbTel.Name = "TbTel";
             this.TbTel.Size = new System.Drawing.Size(112, 22);
             this.TbTel.TabIndex = 108;
             // 
-            // label1
+            // lblAdres
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.label1.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label1.Location = new System.Drawing.Point(765, 166);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 24);
-            this.label1.TabIndex = 107;
-            this.label1.Text = "Adres:";
+            this.lblAdres.AutoSize = true;
+            this.lblAdres.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
+            this.lblAdres.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblAdres.Location = new System.Drawing.Point(765, 166);
+            this.lblAdres.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAdres.Name = "lblAdres";
+            this.lblAdres.Size = new System.Drawing.Size(67, 24);
+            this.lblAdres.TabIndex = 107;
+            this.lblAdres.Text = "Adres:";
             // 
-            // label2
+            // lblTel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.label2.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label2.Location = new System.Drawing.Point(547, 166);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 24);
-            this.label2.TabIndex = 106;
-            this.label2.Text = "Tel:";
+            this.lblTel.AutoSize = true;
+            this.lblTel.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
+            this.lblTel.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblTel.Location = new System.Drawing.Point(547, 166);
+            this.lblTel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTel.Name = "lblTel";
+            this.lblTel.Size = new System.Drawing.Size(42, 24);
+            this.lblTel.TabIndex = 106;
+            this.lblTel.Text = "Tel:";
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.LbAdet);
             this.groupBox1.Controls.Add(this.LbFiyat);
             this.groupBox1.Controls.Add(this.LbTuketim);
             this.groupBox1.Controls.Add(this.LbUretim);
@@ -402,16 +403,16 @@ namespace Eczane_Otomasyonu
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = resources.GetString("groupBox1.Text");
             // 
-            // LbUretim
+            // LbFiyat
             // 
-            this.LbUretim.Font = new System.Drawing.Font("Verdana", 10.25F);
-            this.LbUretim.FormattingEnabled = true;
-            this.LbUretim.ItemHeight = 20;
-            this.LbUretim.Location = new System.Drawing.Point(184, 25);
-            this.LbUretim.Margin = new System.Windows.Forms.Padding(4);
-            this.LbUretim.Name = "LbUretim";
-            this.LbUretim.Size = new System.Drawing.Size(166, 104);
-            this.LbUretim.TabIndex = 85;
+            this.LbFiyat.Font = new System.Drawing.Font("Verdana", 10.25F);
+            this.LbFiyat.FormattingEnabled = true;
+            this.LbFiyat.ItemHeight = 20;
+            this.LbFiyat.Location = new System.Drawing.Point(532, 25);
+            this.LbFiyat.Margin = new System.Windows.Forms.Padding(4);
+            this.LbFiyat.Name = "LbFiyat";
+            this.LbFiyat.Size = new System.Drawing.Size(166, 104);
+            this.LbFiyat.TabIndex = 87;
             // 
             // LbTuketim
             // 
@@ -424,16 +425,16 @@ namespace Eczane_Otomasyonu
             this.LbTuketim.Size = new System.Drawing.Size(166, 104);
             this.LbTuketim.TabIndex = 86;
             // 
-            // LbFiyat
+            // LbUretim
             // 
-            this.LbFiyat.Font = new System.Drawing.Font("Verdana", 10.25F);
-            this.LbFiyat.FormattingEnabled = true;
-            this.LbFiyat.ItemHeight = 20;
-            this.LbFiyat.Location = new System.Drawing.Point(532, 25);
-            this.LbFiyat.Margin = new System.Windows.Forms.Padding(4);
-            this.LbFiyat.Name = "LbFiyat";
-            this.LbFiyat.Size = new System.Drawing.Size(166, 104);
-            this.LbFiyat.TabIndex = 87;
+            this.LbUretim.Font = new System.Drawing.Font("Verdana", 10.25F);
+            this.LbUretim.FormattingEnabled = true;
+            this.LbUretim.ItemHeight = 20;
+            this.LbUretim.Location = new System.Drawing.Point(184, 25);
+            this.LbUretim.Margin = new System.Windows.Forms.Padding(4);
+            this.LbUretim.Name = "LbUretim";
+            this.LbUretim.Size = new System.Drawing.Size(166, 104);
+            this.LbUretim.TabIndex = 85;
             // 
             // label3
             // 
@@ -447,30 +448,112 @@ namespace Eczane_Otomasyonu
             this.label3.TabIndex = 111;
             this.label3.Text = "TL";
             // 
+            // LbAdet
+            // 
+            this.LbAdet.Font = new System.Drawing.Font("Verdana", 10.25F);
+            this.LbAdet.FormattingEnabled = true;
+            this.LbAdet.ItemHeight = 20;
+            this.LbAdet.Location = new System.Drawing.Point(706, 25);
+            this.LbAdet.Margin = new System.Windows.Forms.Padding(4);
+            this.LbAdet.Name = "LbAdet";
+            this.LbAdet.Size = new System.Drawing.Size(166, 104);
+            this.LbAdet.TabIndex = 88;
+            // 
+            // TbTcEkle
+            // 
+            this.TbTcEkle.Location = new System.Drawing.Point(613, 222);
+            this.TbTcEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.TbTcEkle.MaxLength = 11;
+            this.TbTcEkle.Name = "TbTcEkle";
+            this.TbTcEkle.Size = new System.Drawing.Size(112, 22);
+            this.TbTcEkle.TabIndex = 112;
+            this.TbTcEkle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbTc_KeyPress);
+            // 
+            // lblTc
+            // 
+            this.lblTc.AutoSize = true;
+            this.lblTc.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
+            this.lblTc.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lblTc.Location = new System.Drawing.Point(548, 220);
+            this.lblTc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTc.Name = "lblTc";
+            this.lblTc.Size = new System.Drawing.Size(36, 24);
+            this.lblTc.TabIndex = 113;
+            this.lblTc.Text = "Tc:";
+            // 
+            // BtnIptal
+            // 
+            this.BtnIptal.Location = new System.Drawing.Point(1051, 256);
+            this.BtnIptal.Name = "BtnIptal";
+            this.BtnIptal.Size = new System.Drawing.Size(122, 40);
+            this.BtnIptal.TabIndex = 114;
+            this.BtnIptal.Text = "İptal";
+            this.BtnIptal.UseVisualStyleBackColor = true;
+            this.BtnIptal.Click += new System.EventHandler(this.btnIptal_Click);
+            // 
+            // Cb_islem
+            // 
+            this.Cb_islem.FormattingEnabled = true;
+            this.Cb_islem.Items.AddRange(new object[] {
+            "Ekle",
+            "Güncelle"});
+            this.Cb_islem.Location = new System.Drawing.Point(1052, 166);
+            this.Cb_islem.Name = "Cb_islem";
+            this.Cb_islem.Size = new System.Drawing.Size(121, 24);
+            this.Cb_islem.TabIndex = 115;
+            // 
+            // TbTc
+            // 
+            this.TbTc.Location = new System.Drawing.Point(1052, 109);
+            this.TbTc.Margin = new System.Windows.Forms.Padding(4);
+            this.TbTc.MaxLength = 11;
+            this.TbTc.Name = "TbTc";
+            this.TbTc.Size = new System.Drawing.Size(121, 22);
+            this.TbTc.TabIndex = 116;
+            this.TbTc.TextChanged += new System.EventHandler(this.TbTc_TextChanged);
+            this.TbTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbTc_KeyPress);
+            // 
+            // lbl_islem
+            // 
+            this.lbl_islem.AutoSize = true;
+            this.lbl_islem.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
+            this.lbl_islem.ForeColor = System.Drawing.Color.Cornsilk;
+            this.lbl_islem.Location = new System.Drawing.Point(976, 165);
+            this.lbl_islem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_islem.Name = "lbl_islem";
+            this.lbl_islem.Size = new System.Drawing.Size(63, 24);
+            this.lbl_islem.TabIndex = 117;
+            this.lbl_islem.Text = "İşlem:";
+            // 
             // EczaneOtomasyon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1181, 598);
+            this.Controls.Add(this.lbl_islem);
+            this.Controls.Add(this.TbTc);
+            this.Controls.Add(this.Cb_islem);
+            this.Controls.Add(this.BtnIptal);
+            this.Controls.Add(this.lblTc);
+            this.Controls.Add(this.TbTcEkle);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.TbAdres);
             this.Controls.Add(this.TbTel);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.lblAdres);
+            this.Controls.Add(this.lblTel);
+            this.Controls.Add(this.BtnMusteriKaydet);
             this.Controls.Add(this.lblFiyat);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.BtnSepetEkle);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.TbSoyad);
             this.Controls.Add(this.TbAd);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
+            this.Controls.Add(this.lblSoyad);
+            this.Controls.Add(this.lblAd);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.BtnListeSil);
             this.Controls.Add(this.lblToplamFiyat);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
@@ -480,7 +563,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.Cb_ilac);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnSatisYap);
             this.Controls.Add(this.pictureBox2);
             this.Name = "EczaneOtomasyon";
             this.Text = "EczaneOtomasyon";
@@ -497,14 +580,13 @@ namespace Eczane_Otomasyonu
         private System.Windows.Forms.Label lblFiyat;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button BtnSepetEkle;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.TextBox TbSoyad;
         private System.Windows.Forms.TextBox TbAd;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblSoyad;
+        private System.Windows.Forms.Label lblAd;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button BtnListeSil;
         private System.Windows.Forms.Label lblToplamFiyat;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -514,18 +596,25 @@ namespace Eczane_Otomasyonu
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnSatisYap;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button BtnMusteriKaydet;
         private System.Windows.Forms.TextBox TbAdres;
         private System.Windows.Forms.TextBox TbTel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblAdres;
+        private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.ComboBox Cb_ilac;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ListBox LbFiyat;
         private System.Windows.Forms.ListBox LbTuketim;
         private System.Windows.Forms.ListBox LbUretim;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox LbAdet;
+        private System.Windows.Forms.TextBox TbTcEkle;
+        private System.Windows.Forms.Label lblTc;
+        private System.Windows.Forms.Button BtnIptal;
+        private System.Windows.Forms.ComboBox Cb_islem;
+        private System.Windows.Forms.TextBox TbTc;
+        private System.Windows.Forms.Label lbl_islem;
     }
 }

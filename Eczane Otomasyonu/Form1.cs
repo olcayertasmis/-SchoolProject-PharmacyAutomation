@@ -18,7 +18,8 @@ namespace Eczane_Otomasyonu
         }
 
         Giris grs = new Giris();
-        EczaneOtomasyon frm = new EczaneOtomasyon();
+        EczaneOtomasyon PersonelFormGiris = new EczaneOtomasyon();
+        YoneticiEkran AdminFormGiris = new YoneticiEkran();
         private void btnGiris_Click(object sender, EventArgs e)
         {
             if (TbKullaniciadi.Text == string.Empty || TbSifre.Text == string.Empty)
@@ -31,8 +32,16 @@ namespace Eczane_Otomasyonu
                 string bilgiTut = TbKullaniciadi.Text + "" + TbSifre.Text.ToString();
                 if (grs.girisDurumu == bilgiTut)
                 {
-                    frm.Show();
-                    this.Hide();
+                    if (grs.yoneticimi_tut == true)
+                    {
+                        AdminFormGiris.Show();
+                        this.Hide();
+                    }
+                    else if (grs.yoneticimi_tut == false)
+                    {
+                        PersonelFormGiris.Show();
+                        this.Hide();
+                    }
                 }
             }
         }

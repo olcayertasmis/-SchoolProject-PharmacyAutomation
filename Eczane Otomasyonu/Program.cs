@@ -13,7 +13,7 @@ namespace Eczane_Otomasyonu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EczaneOtomasyon());
+            Application.Run(new Form1());
         }
     }
 }

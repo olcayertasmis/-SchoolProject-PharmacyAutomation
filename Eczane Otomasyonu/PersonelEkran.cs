@@ -63,7 +63,14 @@ namespace Eczane_Otomasyonu
             {
 
             }
+        }
 
+        YoneticiEkran AdminForm = new YoneticiEkran();
+        private void BtnGeri_Click(object sender, EventArgs e)
+        {
+            
+            AdminForm.Show();
+            this.Hide();
         }
     }
 }
