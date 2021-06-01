@@ -16,22 +16,22 @@ namespace Eczane_Otomasyonu
         {
             InitializeComponent();
         }
-        PersonelEkran PersonelForm = new PersonelEkran();
         private void BtnPersonel_Click(object sender, EventArgs e)
         {
+            PersonelEkran PersonelForm = new PersonelEkran();
             PersonelForm.Show();
             this.Hide();
         }
 
-        HastaEkran HastaForm = new HastaEkran();
         private void BtnHasta_Click(object sender, EventArgs e)
         {
+            HastaEkran HastaForm = new HastaEkran();
             HastaForm.Show();
             this.Hide();
         }
-        IlacEkran IlacForm = new IlacEkran();
         private void BtnIlac_Click(object sender, EventArgs e)
         {
+            IlacEkran IlacForm = new IlacEkran();
             IlacForm.Show();
             this.Hide();
         }

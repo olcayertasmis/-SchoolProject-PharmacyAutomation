@@ -18,8 +18,6 @@ namespace Eczane_Otomasyonu
         }
 
         Giris grs = new Giris();
-        EczaneOtomasyon PersonelFormGiris = new EczaneOtomasyon();
-        YoneticiEkran AdminFormGiris = new YoneticiEkran();
         private void btnGiris_Click(object sender, EventArgs e)
         {
             if (TbKullaniciadi.Text == string.Empty || TbSifre.Text == string.Empty)
@@ -34,11 +32,13 @@ namespace Eczane_Otomasyonu
                 {
                     if (grs.yoneticimi_tut == true)
                     {
+                        YoneticiEkran AdminFormGiris = new YoneticiEkran();
                         AdminFormGiris.Show();
                         this.Hide();
                     }
                     else if (grs.yoneticimi_tut == false)
                     {
+                        EczaneOtomasyon PersonelFormGiris = new EczaneOtomasyon();
                         PersonelFormGiris.Show();
                         this.Hide();
                     }

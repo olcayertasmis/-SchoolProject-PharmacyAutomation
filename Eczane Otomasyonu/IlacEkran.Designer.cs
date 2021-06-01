@@ -152,6 +152,7 @@ namespace Eczane_Otomasyonu
             this.BtnGeri.TabIndex = 19;
             this.BtnGeri.Text = "GERİ";
             this.BtnGeri.UseVisualStyleBackColor = true;
+            this.BtnGeri.Click += new System.EventHandler(this.BtnGeri_Click);
             // 
             // TbYenilac
             // 

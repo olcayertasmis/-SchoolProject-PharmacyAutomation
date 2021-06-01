@@ -137,5 +137,12 @@ namespace Eczane_Otomasyonu
             DtUretim.Text = dataGridView1.Rows[e.RowIndex].Cells["uretim_tarihi"].Value.ToString();
             DtSonKullanim.Text = dataGridView1.Rows[e.RowIndex].Cells["tuketim_tarihi"].Value.ToString();
         }
+
+        private void BtnGeri_Click(object sender, EventArgs e)
+        {
+            YoneticiEkran AdminForm = new YoneticiEkran();
+            AdminForm.Show();
+            this.Hide();
+        }
     }
 }
