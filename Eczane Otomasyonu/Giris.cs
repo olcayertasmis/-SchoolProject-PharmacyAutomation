@@ -46,11 +46,14 @@ namespace Eczane_Otomasyonu
                         SqlDataReader yonetici_Oku = yonetici.ExecuteReader();
                         if (yonetici_Oku.Read())
                         {
-                            yoneticimi_tut = true;
-                        }
-                        else
-                        {
-                            yoneticimi_tut = false;
+                            if (yonetici_Oku["yoneticimi"].ToString() == "True")
+                            {
+                                yoneticimi_tut = true;
+                            }
+                            else
+                            {
+                                yoneticimi_tut = false;
+                            }
                         }
                     }
                     else

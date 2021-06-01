@@ -234,7 +234,7 @@ namespace Eczane_Otomasyonu
 
                         if (secenek == DialogResult.Yes)
                         {
-                            TbTc.Visible = false;
+                            TbTc.ReadOnly = true;
                             lblAd.Visible = true;
                             lblSoyad.Visible = true;
                             lblTc.Visible = true;
@@ -273,9 +273,10 @@ namespace Eczane_Otomasyonu
             }
         }
 
-        private void btnIptal_Click(object sender, EventArgs e)
+        public void btnIptal_Click(object sender, EventArgs e)
         {
             VisibleFalseYap();
+            TbTc.ReadOnly = false;
             lblTc.Text = "TC:";
         }
 
@@ -286,6 +287,9 @@ namespace Eczane_Otomasyonu
                 lblTc.Text = "TC:";
                 MusteriCrud mc = new MusteriCrud();
                 mc.ekle(TbTcEkle.Text, TbAd.Text, TbSoyad.Text, TbTel.Text, TbAdres.Text);
+                VisibleFalseYap();
+                TbTc.ReadOnly = false;
+                lblTc.Text = "TC:";
             }
             else if ((Cb_islem.SelectedItem).ToString() == "Güncelle")
             {
