@@ -19,9 +19,16 @@ namespace Eczane_Otomasyonu
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            MusteriCrud mc = new MusteriCrud();
-            mc.ekle(TbTc.Text, TbAd.Text, TbSoyad.Text, TbTel.Text, TbAdres.Text);
-            dataGridView1.DataSource = mc.tablolar();
+            if (TbAd.Text == null || TbAd.Text == "" || TbAd.Text == " " || TbAdres.Text == null || TbAdres.Text == "" || TbAdres.Text == " " || TbSoyad.Text == null || TbSoyad.Text == "" || TbSoyad.Text == " " || TbTc.Text == null || TbTc.Text == "" || TbTel.Text == null || TbTel.Text == "")
+            {
+                MessageBox.Show("Boş Kutucuk Bırakmayınız");
+            }
+            else
+            {
+                MusteriCrud mc = new MusteriCrud();
+                mc.ekle(TbTc.Text, TbAd.Text, TbSoyad.Text, TbTel.Text, TbAdres.Text);
+                dataGridView1.DataSource = mc.tablolar();
+            }
         }
 
         private void BtnGüncelle_Click(object sender, EventArgs e)
@@ -69,6 +76,15 @@ namespace Eczane_Otomasyonu
             YoneticiEkran AdminForm = new YoneticiEkran();
             AdminForm.Show();
             this.Hide();
+        }
+
+        private void TbTc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

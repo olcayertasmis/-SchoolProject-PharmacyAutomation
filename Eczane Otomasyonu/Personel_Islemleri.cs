@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Eczane_Otomasyonu
 {
@@ -115,33 +116,114 @@ namespace Eczane_Otomasyonu
         }
         public void ekle(string tc, string adi, string soyadi, string kullaniciadi, string parola)
         {
-            if (db.baglanti.State == System.Data.ConnectionState.Open)
+            if (CalisanVarMi(tc) == false && kullaniciAdiVarMi(kullaniciadi) == false)
+            {
+                if (db.baglanti.State == System.Data.ConnectionState.Open)
+                {
+                    db.baglanti.Close();
+                }
+                try
+                {
+                    db.baglanti.Open();
+                    SqlCommand ekle = new SqlCommand("insert into calisanlar values(@calisan_adi, @calisan_soyadi, @kullaniciadi, @parola, @yoneticimi, @tc)", db.baglanti);
+                    //SqlCommand ekle = new SqlCommand("insert into Personeller values(@tc,@adi,@soyadi,@girisID)", db.baglanti);
+                    ekle.Parameters.AddWithValue("@tc", tc);
+                    ekle.Parameters.AddWithValue("@calisan_adi", adi);
+                    ekle.Parameters.AddWithValue("@calisan_soyadi", soyadi);
+                    ekle.Parameters.AddWithValue("@kullaniciadi", kullaniciadi);
+                    ekle.Parameters.AddWithValue("@parola", parola);
+                    ekle.Parameters.AddWithValue("@yoneticimi", 0);
+                    ekle.ExecuteNonQuery();
+                    System.Windows.Forms.MessageBox.Show("Çalışan kayıdı, başarılı bir şekilde oluşmuştur...", "Bilgi", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
+                    ekle.Dispose();
+                }
+                catch (Exception hata)
+                {
+                    System.Windows.Forms.MessageBox.Show("" + hata);
+                }
+                finally
+                {
+                    db.baglanti.Close();
+                }
+            }
+
+        }
+
+        public bool CalisanVarMi(string tc)
+        {
+            bool varMi = false;
+            if (db.baglanti.State == ConnectionState.Open)
             {
                 db.baglanti.Close();
             }
             try
             {
                 db.baglanti.Open();
-                SqlCommand ekle = new SqlCommand("insert into calisanlar values(@calisan_adi, @calisan_soyadi, @kullaniciadi, @parola, @yoneticimi, @tc)", db.baglanti);
-                //SqlCommand ekle = new SqlCommand("insert into Personeller values(@tc,@adi,@soyadi,@girisID)", db.baglanti);
-                ekle.Parameters.AddWithValue("@tc", tc);
-                ekle.Parameters.AddWithValue("@calisan_adi", adi);
-                ekle.Parameters.AddWithValue("@calisan_soyadi", soyadi);
-                ekle.Parameters.AddWithValue("@kullaniciadi", kullaniciadi);
-                ekle.Parameters.AddWithValue("@parola", parola);
-                ekle.Parameters.AddWithValue("@yoneticimi", 0);
-                ekle.ExecuteNonQuery();
-                System.Windows.Forms.MessageBox.Show("Çalışan kayıdı, başarılı bir şekilde oluşmuştur...", "Bilgi", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Information);
-                ekle.Dispose();
+                SqlCommand tcKontrol = new SqlCommand("select calisan_id from calisanlar where TC=@tc", db.baglanti);
+                tcKontrol.Parameters.AddWithValue("@tc", tc);
+                SqlDataReader kontrolOku = tcKontrol.ExecuteReader();
+                if (kontrolOku.Read())//Calışan Varsa ==================
+                {
+                    MessageBox.Show("Zaten bu Tc ile kayıtlı bir Çalışan var !");
+                    varMi = true;
+                    return varMi;
+                }
+                else
+                {           // Müşteri Yoksa ================
+                    varMi = false;
+                    return varMi;
+                }
+
+
             }
             catch (Exception hata)
             {
-                System.Windows.Forms.MessageBox.Show("" + hata);
+                MessageBox.Show("Çalışan Sorgusunda Hata !" + hata);
             }
             finally
             {
                 db.baglanti.Close();
             }
+            return varMi;
+        }
+
+        public bool kullaniciAdiVarMi(string kullanici_adi)
+        {
+            bool varMi = false;
+            if (db.baglanti.State == ConnectionState.Open)
+            {
+                db.baglanti.Close();
+            }
+            try
+            {
+                db.baglanti.Open();
+                SqlCommand kaKontrol = new SqlCommand("select calisan_id from calisanlar where kullanici_adi=@k_adi", db.baglanti);
+                kaKontrol.Parameters.AddWithValue("@k_adi", kullanici_adi);
+                SqlDataReader kontrolOku = kaKontrol.ExecuteReader();
+                if (kontrolOku.Read())//Calışan Varsa ==================
+                {
+                    MessageBox.Show("Zaten bu Kullanıcı adı ile kayıtlı bir Çalışan var !");
+                    varMi = true;
+                    return varMi;
+                }
+                else
+                {           // Müşteri Yoksa ================
+
+                    varMi = false;
+                    return varMi;
+                }
+
+
+            }
+            catch (Exception hata)
+            {
+                MessageBox.Show("Çalışan Sorgusunda Hata !" + hata);
+            }
+            finally
+            {
+                db.baglanti.Close();
+            }
+            return varMi;
         }
     }
 }

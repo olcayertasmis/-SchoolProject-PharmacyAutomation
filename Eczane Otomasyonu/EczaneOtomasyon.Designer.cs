@@ -58,17 +58,18 @@ namespace Eczane_Otomasyonu
             this.lblAdres = new System.Windows.Forms.Label();
             this.lblTel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.LbAdet = new System.Windows.Forms.ListBox();
             this.LbFiyat = new System.Windows.Forms.ListBox();
             this.LbTuketim = new System.Windows.Forms.ListBox();
             this.LbUretim = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.LbAdet = new System.Windows.Forms.ListBox();
             this.TbTcEkle = new System.Windows.Forms.TextBox();
             this.lblTc = new System.Windows.Forms.Label();
             this.BtnIptal = new System.Windows.Forms.Button();
             this.Cb_islem = new System.Windows.Forms.ComboBox();
             this.TbTc = new System.Windows.Forms.TextBox();
             this.lbl_islem = new System.Windows.Forms.Label();
+            this.BtnMusteriGüncelle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -364,6 +365,7 @@ namespace Eczane_Otomasyonu
             this.TbTel.Name = "TbTel";
             this.TbTel.Size = new System.Drawing.Size(112, 22);
             this.TbTel.TabIndex = 108;
+            this.TbTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbTc_KeyPress);
             // 
             // lblAdres
             // 
@@ -402,6 +404,17 @@ namespace Eczane_Otomasyonu
             this.groupBox1.TabIndex = 110;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = resources.GetString("groupBox1.Text");
+            // 
+            // LbAdet
+            // 
+            this.LbAdet.Font = new System.Drawing.Font("Verdana", 10.25F);
+            this.LbAdet.FormattingEnabled = true;
+            this.LbAdet.ItemHeight = 20;
+            this.LbAdet.Location = new System.Drawing.Point(706, 25);
+            this.LbAdet.Margin = new System.Windows.Forms.Padding(4);
+            this.LbAdet.Name = "LbAdet";
+            this.LbAdet.Size = new System.Drawing.Size(166, 104);
+            this.LbAdet.TabIndex = 88;
             // 
             // LbFiyat
             // 
@@ -448,17 +461,6 @@ namespace Eczane_Otomasyonu
             this.label3.TabIndex = 111;
             this.label3.Text = "TL";
             // 
-            // LbAdet
-            // 
-            this.LbAdet.Font = new System.Drawing.Font("Verdana", 10.25F);
-            this.LbAdet.FormattingEnabled = true;
-            this.LbAdet.ItemHeight = 20;
-            this.LbAdet.Location = new System.Drawing.Point(706, 25);
-            this.LbAdet.Margin = new System.Windows.Forms.Padding(4);
-            this.LbAdet.Name = "LbAdet";
-            this.LbAdet.Size = new System.Drawing.Size(166, 104);
-            this.LbAdet.TabIndex = 88;
-            // 
             // TbTcEkle
             // 
             this.TbTcEkle.Location = new System.Drawing.Point(613, 222);
@@ -501,6 +503,7 @@ namespace Eczane_Otomasyonu
             this.Cb_islem.Name = "Cb_islem";
             this.Cb_islem.Size = new System.Drawing.Size(121, 24);
             this.Cb_islem.TabIndex = 115;
+            this.Cb_islem.SelectedValueChanged += new System.EventHandler(this.Cb_islem_SelectedValueChanged);
             // 
             // TbTc
             // 
@@ -525,12 +528,23 @@ namespace Eczane_Otomasyonu
             this.lbl_islem.TabIndex = 117;
             this.lbl_islem.Text = "İşlem:";
             // 
+            // BtnMusteriGüncelle
+            // 
+            this.BtnMusteriGüncelle.Location = new System.Drawing.Point(998, 150);
+            this.BtnMusteriGüncelle.Name = "BtnMusteriGüncelle";
+            this.BtnMusteriGüncelle.Size = new System.Drawing.Size(175, 40);
+            this.BtnMusteriGüncelle.TabIndex = 118;
+            this.BtnMusteriGüncelle.Text = "Müşteriyi Güncelle";
+            this.BtnMusteriGüncelle.UseVisualStyleBackColor = true;
+            this.BtnMusteriGüncelle.Click += new System.EventHandler(this.BtnMusteriGüncelle_Click);
+            // 
             // EczaneOtomasyon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1181, 598);
+            this.Controls.Add(this.BtnMusteriGüncelle);
             this.Controls.Add(this.lbl_islem);
             this.Controls.Add(this.TbTc);
             this.Controls.Add(this.Cb_islem);
@@ -616,5 +630,6 @@ namespace Eczane_Otomasyonu
         private System.Windows.Forms.ComboBox Cb_islem;
         private System.Windows.Forms.TextBox TbTc;
         private System.Windows.Forms.Label lbl_islem;
+        private System.Windows.Forms.Button BtnMusteriGüncelle;
     }
 }

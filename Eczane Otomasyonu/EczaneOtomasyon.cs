@@ -64,7 +64,8 @@ namespace Eczane_Otomasyonu
         {
             Cb_ilac_cek();
             VisibleFalseYap();
-
+            BtnMusteriGüncelle.Visible = false;
+            TbTc.Enabled = true;
         }
 
         private void Cb_ilac_SelectedIndexChanged(object sender, EventArgs e)
@@ -111,84 +112,99 @@ namespace Eczane_Otomasyonu
 
         private void CbAdet_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int adet = Convert.ToInt32(CbAdet.SelectedItem);
-
-            Database db = new Database();
-            if (db.baglanti.State == ConnectionState.Open)
+            if (Cb_ilac.Text == "" || Cb_ilac.Text == null)
             {
-                db.baglanti.Close();
+                MessageBox.Show("İlaç Seçmeden Adet Seçemezsiniz ! ", "Hata | Eczane Otomasyonu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            try
+            else
             {
-                db.baglanti.Open();
-                SqlCommand fiyatAl = new SqlCommand("select fiyat from ilaclar where ilac_ismi=@ilac_adi", db.baglanti);
-                fiyatAl.Parameters.AddWithValue("@ilac_adi", Cb_ilac.SelectedItem.ToString());
-                string fiyat = fiyatAl.ExecuteScalar().ToString();
-                float ilac_fiyat = float.Parse(fiyat);
+                int adet = Convert.ToInt32(CbAdet.SelectedItem);
 
-                lblFiyat.Text = (ilac_fiyat * adet).ToString();
+                Database db = new Database();
+                if (db.baglanti.State == ConnectionState.Open)
+                {
+                    db.baglanti.Close();
+                }
+                try
+                {
+                    db.baglanti.Open();
+                    SqlCommand fiyatAl = new SqlCommand("select fiyat from ilaclar where ilac_ismi=@ilac_adi", db.baglanti);
+                    fiyatAl.Parameters.AddWithValue("@ilac_adi", Cb_ilac.SelectedItem.ToString());
+                    string fiyat = fiyatAl.ExecuteScalar().ToString();
+                    float ilac_fiyat = float.Parse(fiyat);
 
-                db.baglanti.Close();
+                    lblFiyat.Text = (ilac_fiyat * adet).ToString();
 
+                    db.baglanti.Close();
+
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("İlacın Fiyat Bilgisi Yüklenemedi !");
+                }
+                finally
+                {
+                    db.baglanti.Close();
+                }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("İlacın Fiyat Bilgisi Yüklenemedi !");
-            }
-            finally
-            {
-                db.baglanti.Close();
-            }
+
         }
 
         private void BtnSepetEkle_Click(object sender, EventArgs e)
         {
-            // ## Toplam Fiyat Hesaplama ##
-            float hesap = float.Parse(lblFiyat.Text);
-            float toplamHesap = float.Parse(lblToplamFiyat.Text);
-            toplamHesap += hesap;
-            lblToplamFiyat.Text = toplamHesap.ToString();
-            // ## Fiyat Çekme ##
-            LbFiyat.Items.Add(lblFiyat.Text);
-            // ## İsim Çekme ##
-            LbAd.Items.Add(Cb_ilac.SelectedItem);
-            // ## Adet Çekme ##============================
-            LbAdet.Items.Add(CbAdet.SelectedItem);
-            // ## Tarih Çekme ##
-            Database db = new Database();
-            if (db.baglanti.State == ConnectionState.Open)
+            if (Cb_ilac.Text == "" || Cb_ilac.Text == null || CbAdet.Text == "" || CbAdet.Text == null)
             {
-                db.baglanti.Close();
+                MessageBox.Show("İlaç veya ilac'ın adet bilgisi boş bırakılamaz ! ", "Hata | Eczane Otomasyonu", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            try
+            else
             {
-                db.baglanti.Open();
-                //   ## Üretim Tarihini Çekme ##
-                SqlCommand TarihAl = new SqlCommand("select uretim_tarihi from ilaclar where ilac_ismi=@ilacadi ", db.baglanti);
-                TarihAl.Parameters.AddWithValue("@ilacadi", Cb_ilac.SelectedItem.ToString());
-                string tarihUretim = TarihAl.ExecuteScalar().ToString();
-                LbUretim.Items.Add(tarihUretim.TrimEnd('0', ':', '.'));
-                //   ## Tüketim Tarihini Çekme ##
-                SqlCommand TarihAlTuketim = new SqlCommand("select tuketim_tarihi from ilaclar where ilac_ismi=@ilacadi ", db.baglanti);
-                TarihAlTuketim.Parameters.AddWithValue("@ilacadi", Cb_ilac.SelectedItem.ToString());
-                string tarihTuketim = TarihAlTuketim.ExecuteScalar().ToString();
-                LbTuketim.Items.Add(tarihTuketim.TrimEnd('0', ':', '.'));
-                db.baglanti.Close();
+                // ## Toplam Fiyat Hesaplama ##
+                float hesap = float.Parse(lblFiyat.Text);
+                float toplamHesap = float.Parse(lblToplamFiyat.Text);
+                toplamHesap += hesap;
+                lblToplamFiyat.Text = toplamHesap.ToString();
+                // ## Fiyat Çekme ##
+                LbFiyat.Items.Add(lblFiyat.Text);
+                // ## İsim Çekme ##
+                LbAd.Items.Add(Cb_ilac.SelectedItem);
+                // ## Adet Çekme ##============================
+                LbAdet.Items.Add(CbAdet.SelectedItem);
+                // ## Tarih Çekme ##
+                Database db = new Database();
+                if (db.baglanti.State == ConnectionState.Open)
+                {
+                    db.baglanti.Close();
+                }
+                try
+                {
+                    db.baglanti.Open();
+                    //   ## Üretim Tarihini Çekme ##
+                    SqlCommand TarihAl = new SqlCommand("select uretim_tarihi from ilaclar where ilac_ismi=@ilacadi ", db.baglanti);
+                    TarihAl.Parameters.AddWithValue("@ilacadi", Cb_ilac.SelectedItem.ToString());
+                    string tarihUretim = TarihAl.ExecuteScalar().ToString();
+                    LbUretim.Items.Add(tarihUretim.TrimEnd('0', ':', '.'));
+                    //   ## Tüketim Tarihini Çekme ##
+                    SqlCommand TarihAlTuketim = new SqlCommand("select tuketim_tarihi from ilaclar where ilac_ismi=@ilacadi ", db.baglanti);
+                    TarihAlTuketim.Parameters.AddWithValue("@ilacadi", Cb_ilac.SelectedItem.ToString());
+                    string tarihTuketim = TarihAlTuketim.ExecuteScalar().ToString();
+                    LbTuketim.Items.Add(tarihTuketim.TrimEnd('0', ':', '.'));
+                    db.baglanti.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Sepete Eklenmedi !");
+                }
+                finally
+                {
+                    db.baglanti.Close();
+                }
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Sepete Eklenmedi !");
-            }
-            finally
-            {
-                db.baglanti.Close();
-            }
+
         }
 
         private void TbTc_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
-
             if (!Char.IsDigit(ch) && ch != 8)
             {
                 e.Handled = true;
@@ -213,6 +229,14 @@ namespace Eczane_Otomasyonu
                     SqlDataReader tcOku = tcSorgu.ExecuteReader();
                     if (tcOku.Read())//Müşteri Bulunduysa =============================================
                     {
+                        if (Cb_islem.Text == "Güncelle")
+                        {
+                            BtnMusteriGüncelle.Visible = false;
+                        }
+                        else
+                        {
+                            BtnMusteriGüncelle.Visible = true;
+                        }
                         lblAd.Visible = true;
                         lblSoyad.Visible = true;
                         lblTel.Visible = true;
@@ -230,11 +254,12 @@ namespace Eczane_Otomasyonu
                     }
                     else //Müşteri bulunamazsa ===============================
                     {
-                        DialogResult secenek = MessageBox.Show("Müşteri Bulunamadı, Yeni Müşteri Kayıdı yapmak ister misiniz ?", "Bilgilendirme Penceresi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        DialogResult secenek = MessageBox.Show("Müşteri Bulunamadı, Yeni Müşteri Kayıdı Veya Güncelleme Yapmak İster Misiniz ?", "Bilgilendirme Penceresi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                         if (secenek == DialogResult.Yes)
                         {
-                            TbTc.ReadOnly = true;
+
+                            TbTc.Enabled = false;
                             lblAd.Visible = true;
                             lblSoyad.Visible = true;
                             lblTc.Visible = true;
@@ -242,21 +267,27 @@ namespace Eczane_Otomasyonu
                             lblAdres.Visible = true;
                             lbl_islem.Visible = true;
 
+                            TbAd.Clear();
                             TbAd.Visible = true;
+                            TbSoyad.Clear();
                             TbSoyad.Visible = true;
+                            TbTcEkle.Text = TbTc.Text;
                             TbTcEkle.Visible = true;
+                            TbTel.Clear();
                             TbTel.Visible = true;
+                            TbAdres.Clear();
                             TbAdres.Visible = true;
 
                             BtnMusteriKaydet.Visible = true;
                             BtnIptal.Visible = true;
+                            BtnMusteriGüncelle.Visible = false;
 
                             Cb_islem.SelectedItem = "Ekle";
                             Cb_islem.Visible = true;
                         }
                         else if (secenek == DialogResult.No)
                         {
-
+                            TbTc.Enabled = true;
                         }
 
                     }
@@ -273,58 +304,61 @@ namespace Eczane_Otomasyonu
             }
         }
 
-        public void btnIptal_Click(object sender, EventArgs e)
+        private void btnIptal_Click(object sender, EventArgs e)
         {
             VisibleFalseYap();
-            TbTc.ReadOnly = false;
             lblTc.Text = "TC:";
+            TbTc.Enabled = true;
         }
 
         private void btnMusteriKaydet_Click(object sender, EventArgs e)
         {
-            if ((Cb_islem.SelectedItem).ToString() == "Ekle")
+            if (TbAd.Text == "" || TbAd.Text == " " || TbAdres.Text == "" || TbAdres.Text == " " || TbSoyad.Text == "" || TbSoyad.Text == " " || TbTc.Text == "" || TbTc.Text == null || TbTcEkle.Text == "" || TbTcEkle.Text == null || TbTel.Text == "" || TbTel.Text == " ")
             {
-                lblTc.Text = "TC:";
-                MusteriCrud mc = new MusteriCrud();
-                mc.ekle(TbTcEkle.Text, TbAd.Text, TbSoyad.Text, TbTel.Text, TbAdres.Text);
-                VisibleFalseYap();
-                TbTc.ReadOnly = false;
-                lblTc.Text = "TC:";
+                MessageBox.Show("Lütfen Boş Kutucuk Bırakmayınız");
             }
-            else if ((Cb_islem.SelectedItem).ToString() == "Güncelle")
+            else
             {
-                lblTc.Text = "Yeni TC:";
-                MessageBox.Show("Güncellicek inş");
-                Database db = new Database();
-                if (db.baglanti.State == ConnectionState.Open)
-                {
-                    db.baglanti.Close();
-                }
-                try
-                {
-                    db.baglanti.Open();
-                    SqlCommand musteriBul = new SqlCommand("select musteri.musteri_id from musteri where musteri_tc=@musteri_tc", db.baglanti);
-                    musteriBul.Parameters.AddWithValue("@musteri_tc", TbTc.Text);
-                    MessageBox.Show("buraya kadar geldikkk");
-                    SqlDataReader idOku = musteriBul.ExecuteReader();
-                    if (idOku.Read())
-                    {
-                        string id = idOku["musteri_id"].ToString();
-                        MessageBox.Show("buraya kadar geldik" + id);
-                        MusteriCrud mc = new MusteriCrud();
-                        mc.musteriGuncelle(TbTcEkle.Text, id, TbAd.Text, TbSoyad.Text, TbTel.Text, TbAdres.Text);
-                    }
-
-                    db.baglanti.Close();
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Kişi Bilgileri bulunamadı !");
-                }
-                finally
+                if ((Cb_islem.SelectedItem).ToString() == "Ekle")
                 {
                     lblTc.Text = "TC:";
-                    db.baglanti.Close();
+                    MusteriCrud mc = new MusteriCrud();
+                    mc.ekle(TbTcEkle.Text, TbAd.Text, TbSoyad.Text, TbTel.Text, TbAdres.Text);
+                }
+                else if ((Cb_islem.SelectedItem).ToString() == "Güncelle")
+                {
+                    MessageBox.Show("Güncellicek inş");
+                    Database db = new Database();
+                    if (db.baglanti.State == ConnectionState.Open)
+                    {
+                        db.baglanti.Close();
+                    }
+                    try
+                    {
+                        db.baglanti.Open();
+                        SqlCommand musteriBul = new SqlCommand("select musteri.musteri_id from musteri where musteri_tc=@musteri_tc", db.baglanti);
+                        musteriBul.Parameters.AddWithValue("@musteri_tc", TbTc.Text);
+                        MessageBox.Show("buraya kadar geldikkk");
+                        SqlDataReader idOku = musteriBul.ExecuteReader();
+                        if (idOku.Read())
+                        {
+                            string id = idOku["musteri_id"].ToString();
+                            MessageBox.Show("buraya kadar geldik" + id);
+                            MusteriCrud mc = new MusteriCrud();
+                            mc.musteriGuncelle(TbTcEkle.Text, id, TbAd.Text, TbSoyad.Text, TbTel.Text, TbAdres.Text);
+                        }
+
+                        db.baglanti.Close();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Kişi Bilgileri bulunamadı !");
+                    }
+                    finally
+                    {
+                        lblTc.Text = "TC:";
+                        db.baglanti.Close();
+                    }
                 }
             }
         }
@@ -346,7 +380,10 @@ namespace Eczane_Otomasyonu
                     satis_ekle(tc, ad, birimSatisFiyat, satisTarihi, adet);
                 }
             }
-
+            else
+            {
+                MessageBox.Show("Sepete İlaç Eklemeden Satış Yapamazsın");
+            }
         }
         private void satis_ekle(string musteri_tc, string ilac_ad, float satis_fiyati, DateTime satis_tarihi, int adet)
         {
@@ -420,6 +457,52 @@ namespace Eczane_Otomasyonu
             Cb_islem.SelectedItem = "Ekle";
             Cb_islem.Visible = false;
             TbTc.Text = "";
+        }
+
+        private void Cb_islem_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if ((Cb_islem.SelectedItem).ToString() == "Ekle")
+            {
+                lblTc.Text = "TC:";
+                TbTc.Enabled = false;
+            }
+            else if ((Cb_islem.SelectedItem).ToString() == "Güncelle")
+            {
+                TbTc.Enabled = true;
+            }
+        }
+
+        private void BtnMusteriGüncelle_Click(object sender, EventArgs e)
+        {
+            Database db = new Database();
+            if (db.baglanti.State == ConnectionState.Open)
+            {
+                db.baglanti.Close();
+            }
+            try
+            {
+                db.baglanti.Open();
+                SqlCommand musteriBul = new SqlCommand("select musteri.musteri_id from musteri where musteri_tc=@musteri_tc", db.baglanti);
+                musteriBul.Parameters.AddWithValue("@musteri_tc", TbTc.Text);
+                MessageBox.Show("buraya kadar geldikkk");
+                SqlDataReader idOku = musteriBul.ExecuteReader();
+                if (idOku.Read())
+                {
+                    string id = idOku["musteri_id"].ToString();
+                    MusteriCrud mc = new MusteriCrud();
+                    mc.musteriGuncelle(TbTc.Text, id, TbAd.Text, TbSoyad.Text, TbTel.Text, TbAdres.Text);
+                }
+                db.baglanti.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Kişi Bilgileri bulunamadı !");
+            }
+            finally
+            {
+                lblTc.Text = "TC:";
+                db.baglanti.Close();
+            }
         }
     }
 }

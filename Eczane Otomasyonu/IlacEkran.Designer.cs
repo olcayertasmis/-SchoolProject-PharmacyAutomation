@@ -101,6 +101,7 @@ namespace Eczane_Otomasyonu
             this.TbAdet.Name = "TbAdet";
             this.TbAdet.Size = new System.Drawing.Size(163, 22);
             this.TbAdet.TabIndex = 15;
+            this.TbAdet.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbAdet_KeyPress);
             // 
             // TbFiyat
             // 
@@ -237,6 +238,7 @@ namespace Eczane_Otomasyonu
             // 
             // CbilacTur
             // 
+            this.CbilacTur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbilacTur.FormattingEnabled = true;
             this.CbilacTur.Location = new System.Drawing.Point(229, 39);
             this.CbilacTur.Name = "CbilacTur";

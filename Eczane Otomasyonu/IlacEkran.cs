@@ -74,10 +74,17 @@ namespace Eczane_Otomasyonu
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
             ilacCrud ic = new ilacCrud();
-            float deger = float.Parse(TbFiyat.Text);
-            string tur = CbilacTur.SelectedItem.ToString();
-            ic.ekle(TbAd.Text, deger, TbAdet.Text, tur, DtUretim.Value, DtSonKullanim.Value);
-            dataGridView1.DataSource = ic.tablolar();
+            if (CbilacTur.SelectedItem == null || TbAd.Text == null || TbAd.Text == "" || TbAd.Text == " " || TbAdet.Text == "" || TbFiyat.Text == "")
+            {
+                MessageBox.Show("Boş Kutucuk Bırakmayınız");
+            }
+            else
+            {
+                float deger = float.Parse(TbFiyat.Text);
+                string tur = CbilacTur.SelectedItem.ToString();
+                ic.ekle(TbAd.Text, deger, TbAdet.Text, tur, DtUretim.Value, DtSonKullanim.Value);
+                dataGridView1.DataSource = ic.tablolar();
+            }
         }
         private void TbFiyat_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -143,6 +150,15 @@ namespace Eczane_Otomasyonu
             YoneticiEkran AdminForm = new YoneticiEkran();
             AdminForm.Show();
             this.Hide();
+        }
+
+        private void TbAdet_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -98,9 +98,11 @@ namespace Eczane_Otomasyonu
             // TbTc
             // 
             this.TbTc.Location = new System.Drawing.Point(68, 87);
+            this.TbTc.MaxLength = 11;
             this.TbTc.Name = "TbTc";
             this.TbTc.Size = new System.Drawing.Size(100, 22);
             this.TbTc.TabIndex = 15;
+            this.TbTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbTc_KeyPress);
             // 
             // TbSoyad
             // 

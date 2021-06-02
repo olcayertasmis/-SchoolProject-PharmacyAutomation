@@ -102,9 +102,11 @@ namespace Eczane_Otomasyonu
             // TbTc
             // 
             this.TbTc.Location = new System.Drawing.Point(342, 330);
+            this.TbTc.MaxLength = 11;
             this.TbTc.Name = "TbTc";
             this.TbTc.Size = new System.Drawing.Size(100, 22);
             this.TbTc.TabIndex = 6;
+            this.TbTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbTc_KeyPress);
             // 
             // BtnSil
             // 
@@ -139,9 +141,11 @@ namespace Eczane_Otomasyonu
             // TbTel
             // 
             this.TbTel.Location = new System.Drawing.Point(342, 367);
+            this.TbTel.MaxLength = 10;
             this.TbTel.Name = "TbTel";
             this.TbTel.Size = new System.Drawing.Size(100, 22);
             this.TbTel.TabIndex = 12;
+            this.TbTel.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbTc_KeyPress);
             // 
             // label4
             // 

@@ -29,9 +29,16 @@ namespace Eczane_Otomasyonu
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
-            Personel_Islemleri pe = new Personel_Islemleri();
-            pe.ekle(TbTc.Text, TbAd.Text, TbSoyad.Text, TbKullanici.Text, TbParola.Text);
-            dataGridView1.DataSource = pe.tablolar();
+            if (TbKullanici.Text == null || TbKullanici.Text == "" || TbKullanici.Text == " " || TbAd.Text == null || TbAd.Text == "" || TbAd.Text == " " || TbParola.Text == null || TbParola.Text == "" || TbParola.Text == " " || TbSoyad.Text == null || TbSoyad.Text == "" || TbSoyad.Text == " " || TbTc.Text == null || TbTc.Text == "" || TbTc.Text == " ")
+            {
+                MessageBox.Show("Boş Kutucuk Bırakmayınız");
+            }
+            else
+            {
+                Personel_Islemleri pe = new Personel_Islemleri();
+                pe.ekle(TbTc.Text, TbAd.Text, TbSoyad.Text, TbKullanici.Text, TbParola.Text);
+                dataGridView1.DataSource = pe.tablolar();
+            }
         }
 
         private void BtnSil_Click(object sender, EventArgs e)
@@ -70,6 +77,15 @@ namespace Eczane_Otomasyonu
             YoneticiEkran AdminForm = new YoneticiEkran();
             AdminForm.Show();
             this.Hide();
+        }
+
+        private void TbTc_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
