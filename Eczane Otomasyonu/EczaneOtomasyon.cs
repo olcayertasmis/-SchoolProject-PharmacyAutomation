@@ -412,7 +412,11 @@ namespace Eczane_Otomasyonu
                 //satisEkle.Parameters.AddWithValue("@adet", adet);
 
                 // =================== İlaç Log
-
+                SqlCommand login = new SqlCommand("insert into Log(personel_id,aciklama,tarih) values(@personel_id,@aciklama,@tarih)", db.baglanti);
+                login.Parameters.AddWithValue("@personel_id", Giris.myid);
+                login.Parameters.AddWithValue("@aciklama", musteri_tc + " kimlikli hastaya " + ilac_ad + " adlı ilaçtan " + adet + " adet verildi.");
+                login.Parameters.AddWithValue("@tarih", DateTime.Now);
+                login.ExecuteNonQuery();
 
                 // =================== Satış Ekleme
                 SqlCommand spSatisEkle = new SqlCommand("sp_Satis_Yap", db.baglanti);

@@ -35,5 +35,12 @@ namespace Eczane_Otomasyonu
             IlacForm.Show();
             this.Hide();
         }
+
+        private void BtnLog_Click(object sender, EventArgs e)
+        {
+            LogEkran LogForm = new LogEkran();
+            LogForm.Show();
+            this.Hide();
+        }
     }
 }

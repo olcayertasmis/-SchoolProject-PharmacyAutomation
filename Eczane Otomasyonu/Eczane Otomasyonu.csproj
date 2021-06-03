@@ -147,6 +147,12 @@
     <Compile Include="PersonelEkran.Designer.cs">
       <DependentUpon>PersonelEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelLog.Designer.cs">
+      <DependentUpon>PersonelLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Personel_Islemleri.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

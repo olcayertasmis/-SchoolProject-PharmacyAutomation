@@ -45,6 +45,7 @@ namespace Eczane_Otomasyonu
             this.BtnLog.TabIndex = 0;
             this.BtnLog.Text = "Log Kayıtları";
             this.BtnLog.UseVisualStyleBackColor = true;
+            this.BtnLog.Click += new System.EventHandler(this.BtnLog_Click);
             // 
             // BtnIlac
             // 

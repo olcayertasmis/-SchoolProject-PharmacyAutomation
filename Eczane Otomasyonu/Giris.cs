@@ -15,7 +15,7 @@ namespace Eczane_Otomasyonu
         public string kullaniciSifre_tut { get; set; }
         public Boolean yoneticimi_tut = false;
         public string girisDurumu { get; set; }
-        public string myid;
+        public static string myid;
 
         public void girisYap(string kullanıcı_adi, string kullanıcı_sifre)
         {
@@ -34,11 +34,12 @@ namespace Eczane_Otomasyonu
                 {
                     kullaniciAdi_tut = kulAdi_Oku["kullanici_adi"].ToString();
                     
-                    SqlCommand loginPw = new SqlCommand("select parola from calisanlar where parola = @sifre", db.baglanti);
+                    SqlCommand loginPw = new SqlCommand("select * from calisanlar where parola = @sifre", db.baglanti);
                     loginPw.Parameters.AddWithValue("@sifre", kullanıcı_sifre);
                     SqlDataReader loginPw_Oku = loginPw.ExecuteReader();
                     if (loginPw_Oku.Read())
                     {
+                        myid = loginPw_Oku["calisan_id"].ToString();
                         kullaniciSifre_tut = loginPw_Oku["parola"].ToString();
 
                         girisDurumu = kullaniciAdi_tut + "" + kullaniciSifre_tut;
