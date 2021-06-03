@@ -34,6 +34,7 @@ namespace Eczane_Otomasyonu
             this.BtnHasta = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnPersonel = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnLog
@@ -84,11 +85,21 @@ namespace Eczane_Otomasyonu
             this.BtnPersonel.UseVisualStyleBackColor = true;
             this.BtnPersonel.Click += new System.EventHandler(this.BtnPersonel_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(85, 359);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 44);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Personel Bilgileri";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // YoneticiEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(273, 391);
+            this.ClientSize = new System.Drawing.Size(273, 437);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnPersonel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnHasta);
@@ -108,5 +119,6 @@ namespace Eczane_Otomasyonu
         private System.Windows.Forms.Button BtnHasta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnPersonel;
+        private System.Windows.Forms.Button button1;
     }
 }

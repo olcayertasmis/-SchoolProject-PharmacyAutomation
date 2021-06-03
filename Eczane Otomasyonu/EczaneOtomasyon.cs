@@ -404,14 +404,20 @@ namespace Eczane_Otomasyonu
                 ilacIdBul.Parameters.AddWithValue("@ilac_adi", ilac_ad);
                 int ilac_id = Convert.ToInt32(ilacIdBul.ExecuteScalar());
                 // =================== Satış Ekleme
-                SqlCommand satisEkle = new SqlCommand("insert into ilac_satis values(@musteri_id,@ilac_id,@satis_fiyati,@satis_tarihi,@adet)", db.baglanti);
-                satisEkle.Parameters.AddWithValue("@musteri_id", musteri_id);
-                satisEkle.Parameters.AddWithValue("@ilac_id", ilac_id);
-                satisEkle.Parameters.AddWithValue("@satis_fiyati", satis_fiyati);
-                satisEkle.Parameters.AddWithValue("@satis_tarihi", satis_tarihi);
-                satisEkle.Parameters.AddWithValue("@adet", adet);
-
-                satisEkle.ExecuteNonQuery();
+                //SqlCommand satisEkle = new SqlCommand("insert into ilac_satis values(@musteri_id,@ilac_id,@satis_fiyati,@satis_tarihi,@adet)", db.baglanti);
+                //satisEkle.Parameters.AddWithValue("@musteri_id", musteri_id);
+                //satisEkle.Parameters.AddWithValue("@ilac_id", ilac_id);
+                //satisEkle.Parameters.AddWithValue("@satis_fiyati", satis_fiyati);
+                //satisEkle.Parameters.AddWithValue("@satis_tarihi", satis_tarihi);
+                //satisEkle.Parameters.AddWithValue("@adet", adet);
+                SqlCommand spSatisEkle = new SqlCommand("sp_Satis_Yap", db.baglanti);
+                spSatisEkle.CommandType = CommandType.StoredProcedure; //STORED PROCEDURE İLE SATIŞ
+                spSatisEkle.Parameters.AddWithValue("@musteri_id", musteri_id);
+                spSatisEkle.Parameters.AddWithValue("@ilac_id", ilac_id);
+                spSatisEkle.Parameters.AddWithValue("@satis_fiyati", satis_fiyati);
+                spSatisEkle.Parameters.AddWithValue("@satis_tarihi", satis_tarihi);
+                spSatisEkle.Parameters.AddWithValue("@adet", adet);
+                spSatisEkle.ExecuteNonQuery();
 
                 MessageBox.Show(" OLLEY PARA");
 
