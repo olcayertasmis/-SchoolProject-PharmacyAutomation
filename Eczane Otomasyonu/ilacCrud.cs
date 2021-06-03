@@ -23,7 +23,8 @@ namespace Eczane_Otomasyonu
             try
             {
                 db.baglanti.Open();
-                SqlCommand veriAl = new SqlCommand("select ilaclar.ilac_id,ilaclar.ilac_ismi,ilac_turleri.tur_ismi,ilaclar.uretim_tarihi,ilaclar.tuketim_tarihi,ilaclar.fiyat,ilaclar.stok,ilac_turleri.tur_id from ilaclar inner join ilac_turleri on ilaclar.tur_id=ilac_turleri.tur_id", db.baglanti);
+                //SqlCommand veriAl = new SqlCommand("select ilaclar.ilac_id,ilaclar.ilac_ismi,ilac_turleri.tur_ismi,ilaclar.uretim_tarihi,ilaclar.tuketim_tarihi,ilaclar.fiyat,ilaclar.stok,ilac_turleri.tur_id from ilaclar inner join ilac_turleri on ilaclar.tur_id=ilac_turleri.tur_id", db.baglanti);
+                SqlCommand veriAl = new SqlCommand("select * from ilacview", db.baglanti); //View Kullanıldı
                 SqlDataAdapter da = new SqlDataAdapter(veriAl);
                 DataTable tablo = new DataTable();
                 da.Fill(tablo);

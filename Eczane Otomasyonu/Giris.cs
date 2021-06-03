@@ -15,7 +15,7 @@ namespace Eczane_Otomasyonu
         public string kullaniciSifre_tut { get; set; }
         public Boolean yoneticimi_tut = false;
         public string girisDurumu { get; set; }
-
+        public string myid;
 
         public void girisYap(string kullanıcı_adi, string kullanıcı_sifre)
         {
@@ -33,6 +33,7 @@ namespace Eczane_Otomasyonu
                 if (kulAdi_Oku.Read())
                 {
                     kullaniciAdi_tut = kulAdi_Oku["kullanici_adi"].ToString();
+                    
                     SqlCommand loginPw = new SqlCommand("select parola from calisanlar where parola = @sifre", db.baglanti);
                     loginPw.Parameters.AddWithValue("@sifre", kullanıcı_sifre);
                     SqlDataReader loginPw_Oku = loginPw.ExecuteReader();
