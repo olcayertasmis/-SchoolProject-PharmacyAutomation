@@ -108,6 +108,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EczaneOtomasyonDBDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EczaneOtomasyonDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EczaneOtomasyonDBDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,12 +152,6 @@
     <Compile Include="PersonelEkran.Designer.cs">
       <DependentUpon>PersonelEkran.cs</DependentUpon>
     </Compile>
-    <Compile Include="PersonelLog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PersonelLog.Designer.cs">
-      <DependentUpon>PersonelLog.cs</DependentUpon>
-    </Compile>
     <Compile Include="Personel_Islemleri.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -169,6 +168,12 @@
     </Compile>
     <Compile Include="StokBitenRapor.Designer.cs">
       <DependentUpon>StokBitenRapor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TarihiGecenIlaclarEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TarihiGecenIlaclarEkran.Designer.cs">
+      <DependentUpon>TarihiGecenIlaclarEkran.cs</DependentUpon>
     </Compile>
     <Compile Include="YoneticiEkran.cs">
       <SubType>Form</SubType>
@@ -214,6 +219,10 @@
     <EmbeddedResource Include="StokBitenRapor.resx">
       <DependentUpon>StokBitenRapor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TarihiGecenIlaclarEkran.resx">
+      <DependentUpon>TarihiGecenIlaclarEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarihiGecenilaclarWizard.rdlc" />
     <EmbeddedResource Include="YoneticiEkran.resx">
       <DependentUpon>YoneticiEkran.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +258,17 @@
     </None>
     <None Include="EczaneOtomasyonDBDataSet2.xss">
       <DependentUpon>EczaneOtomasyonDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="EczaneOtomasyonDBDataSet3.xsc">
+      <DependentUpon>EczaneOtomasyonDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="EczaneOtomasyonDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EczaneOtomasyonDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EczaneOtomasyonDBDataSet3.xss">
+      <DependentUpon>EczaneOtomasyonDBDataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

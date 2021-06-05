@@ -36,6 +36,9 @@ namespace Eczane_Otomasyonu
             this.BtnGunuRaporla = new System.Windows.Forms.Button();
             this.BtnGunuGoster = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.BtnTarihGecenlerGoster = new System.Windows.Forms.Button();
+            this.BtnTarihGecenlerRaporla = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +54,7 @@ namespace Eczane_Otomasyonu
             // 
             // BtnStokGoster
             // 
-            this.BtnStokGoster.Location = new System.Drawing.Point(225, 342);
+            this.BtnStokGoster.Location = new System.Drawing.Point(250, 342);
             this.BtnStokGoster.Name = "BtnStokGoster";
             this.BtnStokGoster.Size = new System.Drawing.Size(134, 47);
             this.BtnStokGoster.TabIndex = 1;
@@ -61,11 +64,11 @@ namespace Eczane_Otomasyonu
             // 
             // BtnStokRapor
             // 
-            this.BtnStokRapor.Location = new System.Drawing.Point(415, 342);
+            this.BtnStokRapor.Location = new System.Drawing.Point(440, 342);
             this.BtnStokRapor.Name = "BtnStokRapor";
             this.BtnStokRapor.Size = new System.Drawing.Size(134, 47);
             this.BtnStokRapor.TabIndex = 2;
-            this.BtnStokRapor.Text = "İLAÇ RAPORLA";
+            this.BtnStokRapor.Text = "RAPORLA";
             this.BtnStokRapor.UseVisualStyleBackColor = true;
             this.BtnStokRapor.Click += new System.EventHandler(this.BtnStokRapor_Click);
             // 
@@ -80,17 +83,17 @@ namespace Eczane_Otomasyonu
             // 
             // BtnGunuRaporla
             // 
-            this.BtnGunuRaporla.Location = new System.Drawing.Point(415, 286);
+            this.BtnGunuRaporla.Location = new System.Drawing.Point(440, 286);
             this.BtnGunuRaporla.Name = "BtnGunuRaporla";
             this.BtnGunuRaporla.Size = new System.Drawing.Size(134, 47);
             this.BtnGunuRaporla.TabIndex = 4;
-            this.BtnGunuRaporla.Text = "GÜNÜ RAPORLA";
+            this.BtnGunuRaporla.Text = "RAPORLA";
             this.BtnGunuRaporla.UseVisualStyleBackColor = true;
             this.BtnGunuRaporla.Click += new System.EventHandler(this.BtnGunuRaporla_Click);
             // 
             // BtnGunuGoster
             // 
-            this.BtnGunuGoster.Location = new System.Drawing.Point(225, 286);
+            this.BtnGunuGoster.Location = new System.Drawing.Point(250, 286);
             this.BtnGunuGoster.Name = "BtnGunuGoster";
             this.BtnGunuGoster.Size = new System.Drawing.Size(134, 47);
             this.BtnGunuGoster.TabIndex = 5;
@@ -103,15 +106,47 @@ namespace Eczane_Otomasyonu
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 301);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 17);
+            this.label2.Size = new System.Drawing.Size(221, 17);
             this.label2.TabIndex = 6;
-            this.label2.Text = "BUGÜN YAPILAN SATIŞLAR :";
+            this.label2.Text = "24 SAATTE YAPILAN SATIŞLAR :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 244);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(172, 17);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "TARİHİ GEÇEN İLAÇLAR :";
+            // 
+            // BtnTarihGecenlerGoster
+            // 
+            this.BtnTarihGecenlerGoster.Location = new System.Drawing.Point(250, 229);
+            this.BtnTarihGecenlerGoster.Name = "BtnTarihGecenlerGoster";
+            this.BtnTarihGecenlerGoster.Size = new System.Drawing.Size(134, 47);
+            this.BtnTarihGecenlerGoster.TabIndex = 8;
+            this.BtnTarihGecenlerGoster.Text = "GÖSTER";
+            this.BtnTarihGecenlerGoster.UseVisualStyleBackColor = true;
+            this.BtnTarihGecenlerGoster.Click += new System.EventHandler(this.BtnTarihGecenlerGoster_Click);
+            // 
+            // BtnTarihGecenlerRaporla
+            // 
+            this.BtnTarihGecenlerRaporla.Location = new System.Drawing.Point(440, 229);
+            this.BtnTarihGecenlerRaporla.Name = "BtnTarihGecenlerRaporla";
+            this.BtnTarihGecenlerRaporla.Size = new System.Drawing.Size(134, 47);
+            this.BtnTarihGecenlerRaporla.TabIndex = 7;
+            this.BtnTarihGecenlerRaporla.Text = "RAPORLA";
+            this.BtnTarihGecenlerRaporla.UseVisualStyleBackColor = true;
+            this.BtnTarihGecenlerRaporla.Click += new System.EventHandler(this.BtnTarihGecenlerRaporla_Click);
             // 
             // ReportingSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 401);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.BtnTarihGecenlerGoster);
+            this.Controls.Add(this.BtnTarihGecenlerRaporla);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnGunuGoster);
             this.Controls.Add(this.BtnGunuRaporla);
@@ -137,5 +172,8 @@ namespace Eczane_Otomasyonu
         private System.Windows.Forms.Button BtnGunuRaporla;
         private System.Windows.Forms.Button BtnGunuGoster;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BtnTarihGecenlerGoster;
+        private System.Windows.Forms.Button BtnTarihGecenlerRaporla;
     }
 }

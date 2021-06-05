@@ -53,15 +53,12 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Open();
                 DateTime dateTime = DateTime.Today;
                 string bugün = dateTime.ToString();
-                SqlCommand veriAl = new SqlCommand("select * from GunSonuView where satis_tarihi between @satis_tarihiBas and @satis_tarihiSon", db.baglanti);
-                veriAl.Parameters.AddWithValue("@satis_tarihiBas", dateTime.Date);
-                veriAl.Parameters.AddWithValue("@satis_tarihiSon", dateTime.AddDays(1).Date);
+                SqlCommand veriAl = new SqlCommand("select * from GunSonuView", db.baglanti);
                 SqlDataAdapter da = new SqlDataAdapter(veriAl);
                 DataTable tablo = new DataTable();
                 da.Fill(tablo);
                 return tablo;
                 db.baglanti.Close();
-
             }
             catch (Exception ex)
             {
@@ -72,5 +69,33 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Close();
             }
         }
+        public DataTable TarihiGecenilaclar()
+        {
+            if (db.baglanti.State == ConnectionState.Open)
+            {
+                db.baglanti.Close();
+            }
+            try
+            {
+                db.baglanti.Open();
+                DateTime dateTime = DateTime.Today;
+                string bugün = dateTime.ToString();
+                SqlCommand veriAl = new SqlCommand("select * from TarihiGecenlerView", db.baglanti);
+                SqlDataAdapter da = new SqlDataAdapter(veriAl);
+                DataTable tablo = new DataTable();
+                da.Fill(tablo);
+                return tablo;
+                db.baglanti.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString()); return null;
+            }
+            finally
+            {
+                db.baglanti.Close();
+            }
+        }
+
     }
 }

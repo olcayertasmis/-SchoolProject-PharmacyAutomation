@@ -46,5 +46,17 @@ namespace Eczane_Otomasyonu
             GunRaporu Gr = new GunRaporu();
             Gr.Show();
         }
+
+        private void BtnTarihGecenlerGoster_Click(object sender, EventArgs e)
+        {
+            ReportingCrud Rc = new ReportingCrud();
+            dataGridView1.DataSource = Rc.TarihiGecenilaclar();
+        }
+
+        private void BtnTarihGecenlerRaporla_Click(object sender, EventArgs e)
+        {
+            TarihiGecenIlaclarEkran TgiForm = new TarihiGecenIlaclarEkran();
+            TgiForm.Show();
+        }
     }
 }

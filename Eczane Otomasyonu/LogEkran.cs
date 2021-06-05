@@ -29,29 +29,6 @@ namespace Eczane_Otomasyonu
                 item.SubItems.Add(dr["tarih"].ToString());
                 listView1.Items.Add(item);
             }
-                
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            PersonelLog PersonelLogForm = new PersonelLog();
-            PersonelLogForm.Show();
-            this.Hide();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void LogEkran_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
