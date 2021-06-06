@@ -61,13 +61,13 @@ namespace Eczane_Otomasyonu
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(803, 230);
+            this.dataGridView1.Size = new System.Drawing.Size(762, 230);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.Location = new System.Drawing.Point(667, 571);
+            this.BtnKaydet.Location = new System.Drawing.Point(667, 473);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(107, 44);
             this.BtnKaydet.TabIndex = 18;
@@ -77,7 +77,7 @@ namespace Eczane_Otomasyonu
             // 
             // BtnGüncelle
             // 
-            this.BtnGüncelle.Location = new System.Drawing.Point(526, 571);
+            this.BtnGüncelle.Location = new System.Drawing.Point(526, 473);
             this.BtnGüncelle.Name = "BtnGüncelle";
             this.BtnGüncelle.Size = new System.Drawing.Size(111, 44);
             this.BtnGüncelle.TabIndex = 17;
@@ -87,7 +87,7 @@ namespace Eczane_Otomasyonu
             // 
             // BtnSil
             // 
-            this.BtnSil.Location = new System.Drawing.Point(172, 571);
+            this.BtnSil.Location = new System.Drawing.Point(172, 473);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(120, 44);
             this.BtnSil.TabIndex = 16;
@@ -147,7 +147,7 @@ namespace Eczane_Otomasyonu
             // 
             // BtnGeri
             // 
-            this.BtnGeri.Location = new System.Drawing.Point(23, 571);
+            this.BtnGeri.Location = new System.Drawing.Point(23, 473);
             this.BtnGeri.Name = "BtnGeri";
             this.BtnGeri.Size = new System.Drawing.Size(120, 44);
             this.BtnGeri.TabIndex = 19;
@@ -163,7 +163,7 @@ namespace Eczane_Otomasyonu
             this.groupBox1.Controls.Add(this.TbKullanici);
             this.groupBox1.Location = new System.Drawing.Point(23, 248);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(269, 299);
+            this.groupBox1.Size = new System.Drawing.Size(269, 139);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "GİRİŞ BİLGİLERİ";
@@ -210,7 +210,7 @@ namespace Eczane_Otomasyonu
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Location = new System.Drawing.Point(518, 248);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(256, 299);
+            this.groupBox2.Size = new System.Drawing.Size(256, 139);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "KİŞİ BİLGİLERİ";
@@ -219,7 +219,8 @@ namespace Eczane_Otomasyonu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 752);
+            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.ClientSize = new System.Drawing.Size(789, 529);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnGeri);

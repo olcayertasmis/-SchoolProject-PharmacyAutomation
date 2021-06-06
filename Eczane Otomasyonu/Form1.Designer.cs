@@ -49,10 +49,11 @@ namespace Eczane_Otomasyonu
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 28);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 264);
+            this.pictureBox1.Size = new System.Drawing.Size(302, 239);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -60,6 +61,7 @@ namespace Eczane_Otomasyonu
             // label
             // 
             this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.Transparent;
             this.label.Location = new System.Drawing.Point(271, 48);
             this.label.Name = "label";
             this.label.Size = new System.Drawing.Size(92, 17);
@@ -69,6 +71,7 @@ namespace Eczane_Otomasyonu
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(271, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 17);
@@ -84,18 +87,21 @@ namespace Eczane_Otomasyonu
             // 
             // btnGiris
             // 
+            this.btnGiris.BackColor = System.Drawing.Color.SteelBlue;
             this.btnGiris.Location = new System.Drawing.Point(334, 172);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(132, 67);
             this.btnGiris.TabIndex = 6;
             this.btnGiris.Text = "Giriş";
-            this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.UseVisualStyleBackColor = false;
             this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(555, 288);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.TbSifre);

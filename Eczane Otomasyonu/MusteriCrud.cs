@@ -144,7 +144,6 @@ namespace Eczane_Otomasyonu
                     db.baglanti.Close();
                 }
             }
-
         }
         public bool MusteriVarMi(string tc)
         {
@@ -167,12 +166,9 @@ namespace Eczane_Otomasyonu
                 }
                 else
                 {           // Müşteri Yoksa ================
-                    MessageBox.Show("yok yav olur mu");
                     varMi = false;
                     return varMi;
                 }
-
-
             }
             catch (Exception hata)
             {

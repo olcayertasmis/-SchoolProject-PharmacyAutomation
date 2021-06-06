@@ -61,7 +61,7 @@ namespace Eczane_Otomasyonu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(217, 261);
+            this.label1.Location = new System.Drawing.Point(290, 204);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 1;
@@ -70,7 +70,7 @@ namespace Eczane_Otomasyonu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(217, 296);
+            this.label2.Location = new System.Drawing.Point(290, 239);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 17);
             this.label2.TabIndex = 2;
@@ -79,7 +79,7 @@ namespace Eczane_Otomasyonu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(217, 333);
+            this.label3.Location = new System.Drawing.Point(290, 276);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 17);
             this.label3.TabIndex = 3;
@@ -87,21 +87,21 @@ namespace Eczane_Otomasyonu
             // 
             // TbAd
             // 
-            this.TbAd.Location = new System.Drawing.Point(342, 258);
+            this.TbAd.Location = new System.Drawing.Point(415, 201);
             this.TbAd.Name = "TbAd";
             this.TbAd.Size = new System.Drawing.Size(100, 22);
             this.TbAd.TabIndex = 4;
             // 
             // TbSoyad
             // 
-            this.TbSoyad.Location = new System.Drawing.Point(342, 293);
+            this.TbSoyad.Location = new System.Drawing.Point(415, 236);
             this.TbSoyad.Name = "TbSoyad";
             this.TbSoyad.Size = new System.Drawing.Size(100, 22);
             this.TbSoyad.TabIndex = 5;
             // 
             // TbTc
             // 
-            this.TbTc.Location = new System.Drawing.Point(342, 330);
+            this.TbTc.Location = new System.Drawing.Point(415, 273);
             this.TbTc.MaxLength = 11;
             this.TbTc.Name = "TbTc";
             this.TbTc.Size = new System.Drawing.Size(100, 22);
@@ -110,7 +110,7 @@ namespace Eczane_Otomasyonu
             // 
             // BtnSil
             // 
-            this.BtnSil.Location = new System.Drawing.Point(153, 541);
+            this.BtnSil.Location = new System.Drawing.Point(153, 463);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(120, 44);
             this.BtnSil.TabIndex = 7;
@@ -120,7 +120,7 @@ namespace Eczane_Otomasyonu
             // 
             // BtnGüncelle
             // 
-            this.BtnGüncelle.Location = new System.Drawing.Point(526, 541);
+            this.BtnGüncelle.Location = new System.Drawing.Point(526, 463);
             this.BtnGüncelle.Name = "BtnGüncelle";
             this.BtnGüncelle.Size = new System.Drawing.Size(111, 44);
             this.BtnGüncelle.TabIndex = 8;
@@ -130,7 +130,7 @@ namespace Eczane_Otomasyonu
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.Location = new System.Drawing.Point(681, 541);
+            this.BtnKaydet.Location = new System.Drawing.Point(681, 463);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(107, 44);
             this.BtnKaydet.TabIndex = 9;
@@ -140,7 +140,7 @@ namespace Eczane_Otomasyonu
             // 
             // TbTel
             // 
-            this.TbTel.Location = new System.Drawing.Point(342, 367);
+            this.TbTel.Location = new System.Drawing.Point(415, 310);
             this.TbTel.MaxLength = 10;
             this.TbTel.Name = "TbTel";
             this.TbTel.Size = new System.Drawing.Size(100, 22);
@@ -150,7 +150,7 @@ namespace Eczane_Otomasyonu
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(217, 407);
+            this.label4.Location = new System.Drawing.Point(290, 350);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 17);
             this.label4.TabIndex = 11;
@@ -159,7 +159,7 @@ namespace Eczane_Otomasyonu
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(217, 370);
+            this.label5.Location = new System.Drawing.Point(290, 313);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 17);
             this.label5.TabIndex = 10;
@@ -167,7 +167,7 @@ namespace Eczane_Otomasyonu
             // 
             // TbAdres
             // 
-            this.TbAdres.Location = new System.Drawing.Point(342, 404);
+            this.TbAdres.Location = new System.Drawing.Point(415, 347);
             this.TbAdres.Name = "TbAdres";
             this.TbAdres.Size = new System.Drawing.Size(100, 96);
             this.TbAdres.TabIndex = 14;
@@ -175,7 +175,7 @@ namespace Eczane_Otomasyonu
             // 
             // BtnGeri
             // 
-            this.BtnGeri.Location = new System.Drawing.Point(12, 541);
+            this.BtnGeri.Location = new System.Drawing.Point(12, 463);
             this.BtnGeri.Name = "BtnGeri";
             this.BtnGeri.Size = new System.Drawing.Size(120, 44);
             this.BtnGeri.TabIndex = 15;
@@ -187,7 +187,8 @@ namespace Eczane_Otomasyonu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 597);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(800, 523);
             this.Controls.Add(this.BtnGeri);
             this.Controls.Add(this.TbAdres);
             this.Controls.Add(this.TbTel);

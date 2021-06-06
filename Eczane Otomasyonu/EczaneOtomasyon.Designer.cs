@@ -48,7 +48,6 @@ namespace Eczane_Otomasyonu
             this.CbAdet = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.Cb_ilac = new System.Windows.Forms.ComboBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.BtnSatisYap = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -70,7 +69,6 @@ namespace Eczane_Otomasyonu
             this.TbTc = new System.Windows.Forms.TextBox();
             this.lbl_islem = new System.Windows.Forms.Label();
             this.BtnMusteriGüncelle = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -101,6 +99,7 @@ namespace Eczane_Otomasyonu
             // 
             // BtnSepetEkle
             // 
+            this.BtnSepetEkle.BackColor = System.Drawing.Color.IndianRed;
             this.BtnSepetEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSepetEkle.ForeColor = System.Drawing.Color.White;
             this.BtnSepetEkle.Location = new System.Drawing.Point(84, 313);
@@ -109,7 +108,7 @@ namespace Eczane_Otomasyonu
             this.BtnSepetEkle.Size = new System.Drawing.Size(135, 36);
             this.BtnSepetEkle.TabIndex = 101;
             this.BtnSepetEkle.Text = "Sepete Ekle";
-            this.BtnSepetEkle.UseVisualStyleBackColor = true;
+            this.BtnSepetEkle.UseVisualStyleBackColor = false;
             this.BtnSepetEkle.Click += new System.EventHandler(this.BtnSepetEkle_Click);
             // 
             // TbSoyad
@@ -178,6 +177,7 @@ namespace Eczane_Otomasyonu
             // 
             // BtnListeSil
             // 
+            this.BtnListeSil.BackColor = System.Drawing.Color.IndianRed;
             this.BtnListeSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnListeSil.ForeColor = System.Drawing.Color.White;
             this.BtnListeSil.Location = new System.Drawing.Point(742, 524);
@@ -186,7 +186,7 @@ namespace Eczane_Otomasyonu
             this.BtnListeSil.Size = new System.Drawing.Size(178, 53);
             this.BtnListeSil.TabIndex = 89;
             this.BtnListeSil.Text = "Listeyi Sil";
-            this.BtnListeSil.UseVisualStyleBackColor = true;
+            this.BtnListeSil.UseVisualStyleBackColor = false;
             this.BtnListeSil.Click += new System.EventHandler(this.btnListeSil_Click);
             // 
             // lblToplamFiyat
@@ -287,29 +287,19 @@ namespace Eczane_Otomasyonu
             this.Cb_ilac.BackColor = System.Drawing.SystemColors.Window;
             this.Cb_ilac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cb_ilac.FormattingEnabled = true;
-            this.Cb_ilac.Location = new System.Drawing.Point(84, 73);
+            this.Cb_ilac.Location = new System.Drawing.Point(84, 169);
             this.Cb_ilac.Margin = new System.Windows.Forms.Padding(4);
             this.Cb_ilac.Name = "Cb_ilac";
             this.Cb_ilac.Size = new System.Drawing.Size(144, 24);
             this.Cb_ilac.TabIndex = 73;
             this.Cb_ilac.SelectedIndexChanged += new System.EventHandler(this.Cb_ilac_SelectedIndexChanged);
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(84, 107);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(145, 91);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 72;
-            this.pictureBox6.TabStop = false;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12.25F);
             this.label5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label5.Location = new System.Drawing.Point(78, 40);
+            this.label5.Location = new System.Drawing.Point(79, 120);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 29);
@@ -318,6 +308,7 @@ namespace Eczane_Otomasyonu
             // 
             // BtnSatisYap
             // 
+            this.BtnSatisYap.BackColor = System.Drawing.Color.IndianRed;
             this.BtnSatisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSatisYap.ForeColor = System.Drawing.Color.White;
             this.BtnSatisYap.Location = new System.Drawing.Point(962, 524);
@@ -326,27 +317,29 @@ namespace Eczane_Otomasyonu
             this.BtnSatisYap.Size = new System.Drawing.Size(184, 53);
             this.BtnSatisYap.TabIndex = 63;
             this.BtnSatisYap.Text = "Siparişi Tamamla";
-            this.BtnSatisYap.UseVisualStyleBackColor = true;
+            this.BtnSatisYap.UseVisualStyleBackColor = false;
             this.BtnSatisYap.Click += new System.EventHandler(this.btnSatısYap_Click);
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(252, 73);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(279, 223);
+            this.pictureBox2.Size = new System.Drawing.Size(279, 276);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 59;
             this.pictureBox2.TabStop = false;
             // 
             // BtnMusteriKaydet
             // 
+            this.BtnMusteriKaydet.BackColor = System.Drawing.Color.IndianRed;
             this.BtnMusteriKaydet.Location = new System.Drawing.Point(1051, 203);
             this.BtnMusteriKaydet.Name = "BtnMusteriKaydet";
             this.BtnMusteriKaydet.Size = new System.Drawing.Size(122, 40);
             this.BtnMusteriKaydet.TabIndex = 105;
             this.BtnMusteriKaydet.Text = "Müşteri Kaydet";
-            this.BtnMusteriKaydet.UseVisualStyleBackColor = true;
+            this.BtnMusteriKaydet.UseVisualStyleBackColor = false;
             this.BtnMusteriKaydet.Click += new System.EventHandler(this.btnMusteriKaydet_Click);
             // 
             // TbAdres
@@ -485,12 +478,13 @@ namespace Eczane_Otomasyonu
             // 
             // BtnIptal
             // 
+            this.BtnIptal.BackColor = System.Drawing.Color.IndianRed;
             this.BtnIptal.Location = new System.Drawing.Point(1051, 256);
             this.BtnIptal.Name = "BtnIptal";
             this.BtnIptal.Size = new System.Drawing.Size(122, 40);
             this.BtnIptal.TabIndex = 114;
             this.BtnIptal.Text = "İptal";
-            this.BtnIptal.UseVisualStyleBackColor = true;
+            this.BtnIptal.UseVisualStyleBackColor = false;
             this.BtnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
             // Cb_islem
@@ -530,12 +524,13 @@ namespace Eczane_Otomasyonu
             // 
             // BtnMusteriGüncelle
             // 
+            this.BtnMusteriGüncelle.BackColor = System.Drawing.Color.IndianRed;
             this.BtnMusteriGüncelle.Location = new System.Drawing.Point(998, 150);
             this.BtnMusteriGüncelle.Name = "BtnMusteriGüncelle";
             this.BtnMusteriGüncelle.Size = new System.Drawing.Size(175, 40);
             this.BtnMusteriGüncelle.TabIndex = 118;
             this.BtnMusteriGüncelle.Text = "Müşteriyi Güncelle";
-            this.BtnMusteriGüncelle.UseVisualStyleBackColor = true;
+            this.BtnMusteriGüncelle.UseVisualStyleBackColor = false;
             this.BtnMusteriGüncelle.Click += new System.EventHandler(this.BtnMusteriGüncelle_Click);
             // 
             // EczaneOtomasyon
@@ -575,14 +570,12 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.CbAdet);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Cb_ilac);
-            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.BtnSatisYap);
             this.Controls.Add(this.pictureBox2);
             this.Name = "EczaneOtomasyon";
             this.Text = "EczaneOtomasyon";
             this.Load += new System.EventHandler(this.EczaneOtomasyon_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -608,7 +601,6 @@ namespace Eczane_Otomasyonu
         private System.Windows.Forms.ListBox LbAd;
         private System.Windows.Forms.ComboBox CbAdet;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button BtnSatisYap;
         private System.Windows.Forms.PictureBox pictureBox2;

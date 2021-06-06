@@ -30,5 +30,10 @@ namespace Eczane_Otomasyonu
                 listView1.Items.Add(item);
             }
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

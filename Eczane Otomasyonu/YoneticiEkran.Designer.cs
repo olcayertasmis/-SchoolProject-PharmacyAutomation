@@ -29,12 +29,13 @@ namespace Eczane_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YoneticiEkran));
             this.BtnLog = new System.Windows.Forms.Button();
             this.BtnIlac = new System.Windows.Forms.Button();
             this.BtnHasta = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnPersonel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnRaporla = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnLog
@@ -70,6 +71,8 @@ namespace Eczane_Otomasyonu
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(41, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 17);
@@ -86,21 +89,24 @@ namespace Eczane_Otomasyonu
             this.BtnPersonel.UseVisualStyleBackColor = true;
             this.BtnPersonel.Click += new System.EventHandler(this.BtnPersonel_Click);
             // 
-            // button1
+            // BtnRaporla
             // 
-            this.button1.Location = new System.Drawing.Point(85, 359);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 44);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Personel Bilgileri";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnRaporla.Location = new System.Drawing.Point(85, 359);
+            this.BtnRaporla.Name = "BtnRaporla";
+            this.BtnRaporla.Size = new System.Drawing.Size(103, 44);
+            this.BtnRaporla.TabIndex = 5;
+            this.BtnRaporla.Text = "Rapor Ve İstatistikler";
+            this.BtnRaporla.UseVisualStyleBackColor = true;
+            this.BtnRaporla.Click += new System.EventHandler(this.BtnRaporla_Click);
             // 
             // YoneticiEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(273, 437);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnRaporla);
             this.Controls.Add(this.BtnPersonel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnHasta);
@@ -120,6 +126,6 @@ namespace Eczane_Otomasyonu
         private System.Windows.Forms.Button BtnHasta;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnPersonel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnRaporla;
     }
 }

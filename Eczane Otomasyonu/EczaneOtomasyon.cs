@@ -215,7 +215,7 @@ namespace Eczane_Otomasyonu
         {
             if (TbTc.TextLength == 11)
             {
-                MessageBox.Show("11 oldu");
+                MessageBox.Show("Sorgulanıyor...");
                 Database db = new Database();
                 if (db.baglanti.State == ConnectionState.Open)
                 {
@@ -327,7 +327,6 @@ namespace Eczane_Otomasyonu
                 }
                 else if ((Cb_islem.SelectedItem).ToString() == "Güncelle")
                 {
-                    MessageBox.Show("Güncellicek inş");
                     Database db = new Database();
                     if (db.baglanti.State == ConnectionState.Open)
                     {
@@ -338,16 +337,13 @@ namespace Eczane_Otomasyonu
                         db.baglanti.Open();
                         SqlCommand musteriBul = new SqlCommand("select musteri.musteri_id from musteri where musteri_tc=@musteri_tc", db.baglanti);
                         musteriBul.Parameters.AddWithValue("@musteri_tc", TbTc.Text);
-                        MessageBox.Show("buraya kadar geldikkk");
                         SqlDataReader idOku = musteriBul.ExecuteReader();
                         if (idOku.Read())
                         {
                             string id = idOku["musteri_id"].ToString();
-                            MessageBox.Show("buraya kadar geldik" + id);
                             MusteriCrud mc = new MusteriCrud();
                             mc.musteriGuncelle(TbTcEkle.Text, id, TbAd.Text, TbSoyad.Text, TbTel.Text, TbAdres.Text);
                         }
-
                         db.baglanti.Close();
                     }
                     catch (Exception)
@@ -427,9 +423,7 @@ namespace Eczane_Otomasyonu
                 spSatisEkle.Parameters.AddWithValue("@satis_tarihi", satis_tarihi);
                 spSatisEkle.Parameters.AddWithValue("@adet", adet);
                 spSatisEkle.ExecuteNonQuery();
-
-                MessageBox.Show(" OLLEY PARA");
-
+                MessageBox.Show(" Satış Gerçekleşti");
                 db.baglanti.Close();
             }
             catch (Exception)
@@ -499,7 +493,6 @@ namespace Eczane_Otomasyonu
                 db.baglanti.Open();
                 SqlCommand musteriBul = new SqlCommand("select musteri.musteri_id from musteri where musteri_tc=@musteri_tc", db.baglanti);
                 musteriBul.Parameters.AddWithValue("@musteri_tc", TbTc.Text);
-                MessageBox.Show("buraya kadar geldikkk");
                 SqlDataReader idOku = musteriBul.ExecuteReader();
                 if (idOku.Read())
                 {

@@ -205,7 +205,7 @@ namespace Eczane_Otomasyonu
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.BtnTurEkle);
             this.groupBox1.Controls.Add(this.CbilacTur);
@@ -249,6 +249,7 @@ namespace Eczane_Otomasyonu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(870, 661);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label6);

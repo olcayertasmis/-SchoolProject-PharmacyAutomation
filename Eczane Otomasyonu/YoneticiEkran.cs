@@ -40,7 +40,12 @@ namespace Eczane_Otomasyonu
         {
             LogEkran LogForm = new LogEkran();
             LogForm.Show();
-            this.Hide();
+        }
+
+        private void BtnRaporla_Click(object sender, EventArgs e)
+        {
+            ReportingSystem RaporForm = new ReportingSystem();
+            RaporForm.Show();
         }
     }
 }

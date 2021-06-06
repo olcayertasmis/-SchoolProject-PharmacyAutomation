@@ -49,6 +49,7 @@ namespace Eczane_Otomasyonu
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -58,7 +59,7 @@ namespace Eczane_Otomasyonu
             // columnHeader2
             // 
             this.columnHeader2.Text = "Acıklama";
-            this.columnHeader2.Width = 550;
+            this.columnHeader2.Width = 370;
             // 
             // columnHeader3
             // 

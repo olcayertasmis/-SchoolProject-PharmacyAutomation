@@ -208,7 +208,6 @@ namespace Eczane_Otomasyonu
                 }
                 else
                 {           // Müşteri Yoksa ================
-
                     varMi = false;
                     return varMi;
                 }
