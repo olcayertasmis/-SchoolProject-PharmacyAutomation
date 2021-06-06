@@ -205,7 +205,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "HastaEkran";
-            this.Text = "HastaEkran";
+            this.Text = "MÜŞTERİ BİLGİLERİ";
             this.Load += new System.EventHandler(this.HastaEkran_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

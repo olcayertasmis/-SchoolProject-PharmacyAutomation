@@ -229,7 +229,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.BtnSil);
             this.Controls.Add(this.dataGridView1);
             this.Name = "PersonelEkran";
-            this.Text = "PersonelEkran";
+            this.Text = "PERSONEL BİLGİLERİ";
             this.Load += new System.EventHandler(this.PersonelEkran_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

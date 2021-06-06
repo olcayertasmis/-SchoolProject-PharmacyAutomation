@@ -268,7 +268,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "IlacEkran";
-            this.Text = "IlacEkran";
+            this.Text = "İLAÇ BİLGİLERİ";
             this.Load += new System.EventHandler(this.IlacEkran_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

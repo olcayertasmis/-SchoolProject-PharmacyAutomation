@@ -110,7 +110,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TbKullaniciadi);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "ECZANE GİRİŞ SİSTEMİ";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

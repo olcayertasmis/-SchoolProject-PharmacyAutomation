@@ -574,7 +574,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.BtnSatisYap);
             this.Controls.Add(this.pictureBox2);
             this.Name = "EczaneOtomasyon";
-            this.Text = "EczaneOtomasyon";
+            this.Text = "ECZANE SATIŞ SİSTEMİ";
             this.Load += new System.EventHandler(this.EczaneOtomasyon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
