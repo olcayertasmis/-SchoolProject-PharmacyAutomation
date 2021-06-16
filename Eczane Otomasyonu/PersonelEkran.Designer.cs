@@ -29,6 +29,7 @@ namespace Eczane_Otomasyonu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonelEkran));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnKaydet = new System.Windows.Forms.Button();
             this.BtnGüncelle = new System.Windows.Forms.Button();
@@ -46,9 +47,11 @@ namespace Eczane_Otomasyonu
             this.TbParola = new System.Windows.Forms.TextBox();
             this.TbKullanici = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -67,92 +70,100 @@ namespace Eczane_Otomasyonu
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.Location = new System.Drawing.Point(667, 473);
+            this.BtnKaydet.BackColor = System.Drawing.Color.IndianRed;
+            this.BtnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnKaydet.Location = new System.Drawing.Point(642, 473);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(107, 44);
+            this.BtnKaydet.Size = new System.Drawing.Size(135, 44);
             this.BtnKaydet.TabIndex = 18;
             this.BtnKaydet.Text = "KAYDET";
-            this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.BtnKaydet.UseVisualStyleBackColor = false;
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // BtnGüncelle
             // 
-            this.BtnGüncelle.Location = new System.Drawing.Point(526, 473);
+            this.BtnGüncelle.BackColor = System.Drawing.Color.IndianRed;
+            this.BtnGüncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnGüncelle.Location = new System.Drawing.Point(487, 473);
             this.BtnGüncelle.Name = "BtnGüncelle";
-            this.BtnGüncelle.Size = new System.Drawing.Size(111, 44);
+            this.BtnGüncelle.Size = new System.Drawing.Size(139, 44);
             this.BtnGüncelle.TabIndex = 17;
             this.BtnGüncelle.Text = "GÜNCELLE";
-            this.BtnGüncelle.UseVisualStyleBackColor = true;
+            this.BtnGüncelle.UseVisualStyleBackColor = false;
             this.BtnGüncelle.Click += new System.EventHandler(this.BtnGüncelle_Click);
             // 
             // BtnSil
             // 
-            this.BtnSil.Location = new System.Drawing.Point(172, 473);
+            this.BtnSil.BackColor = System.Drawing.Color.IndianRed;
+            this.BtnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnSil.Location = new System.Drawing.Point(175, 473);
             this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(120, 44);
+            this.BtnSil.Size = new System.Drawing.Size(148, 44);
             this.BtnSil.TabIndex = 16;
             this.BtnSil.Text = "SİL";
-            this.BtnSil.UseVisualStyleBackColor = true;
+            this.BtnSil.UseVisualStyleBackColor = false;
             this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // TbTc
             // 
-            this.TbTc.Location = new System.Drawing.Point(68, 87);
+            this.TbTc.Location = new System.Drawing.Point(112, 91);
             this.TbTc.MaxLength = 11;
             this.TbTc.Name = "TbTc";
-            this.TbTc.Size = new System.Drawing.Size(100, 22);
+            this.TbTc.Size = new System.Drawing.Size(159, 27);
             this.TbTc.TabIndex = 15;
             this.TbTc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbTc_KeyPress);
             // 
             // TbSoyad
             // 
-            this.TbSoyad.Location = new System.Drawing.Point(68, 50);
+            this.TbSoyad.Location = new System.Drawing.Point(112, 58);
             this.TbSoyad.Name = "TbSoyad";
-            this.TbSoyad.Size = new System.Drawing.Size(100, 22);
+            this.TbSoyad.Size = new System.Drawing.Size(159, 27);
             this.TbSoyad.TabIndex = 14;
             // 
             // TbAd
             // 
-            this.TbAd.Location = new System.Drawing.Point(68, 21);
+            this.TbAd.Location = new System.Drawing.Point(112, 25);
             this.TbAd.Name = "TbAd";
-            this.TbAd.Size = new System.Drawing.Size(100, 22);
+            this.TbAd.Size = new System.Drawing.Size(159, 27);
             this.TbAd.TabIndex = 13;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 90);
+            this.label3.Location = new System.Drawing.Point(6, 94);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 17);
+            this.label3.Size = new System.Drawing.Size(40, 20);
             this.label3.TabIndex = 12;
             this.label3.Text = "T.C ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 58);
+            this.label2.Location = new System.Drawing.Point(6, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 17);
+            this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Soyad";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 24);
+            this.label1.Location = new System.Drawing.Point(6, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 17);
+            this.label1.Size = new System.Drawing.Size(29, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Ad";
             // 
             // BtnGeri
             // 
-            this.BtnGeri.Location = new System.Drawing.Point(23, 473);
+            this.BtnGeri.BackColor = System.Drawing.Color.IndianRed;
+            this.BtnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnGeri.Location = new System.Drawing.Point(12, 473);
             this.BtnGeri.Name = "BtnGeri";
-            this.BtnGeri.Size = new System.Drawing.Size(120, 44);
+            this.BtnGeri.Size = new System.Drawing.Size(148, 44);
             this.BtnGeri.TabIndex = 19;
             this.BtnGeri.Text = "GERİ";
-            this.BtnGeri.UseVisualStyleBackColor = true;
+            this.BtnGeri.UseVisualStyleBackColor = false;
             this.BtnGeri.Click += new System.EventHandler(this.BtnGeri_Click);
             // 
             // groupBox1
@@ -161,9 +172,10 @@ namespace Eczane_Otomasyonu
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.TbParola);
             this.groupBox1.Controls.Add(this.TbKullanici);
-            this.groupBox1.Location = new System.Drawing.Point(23, 248);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox1.Location = new System.Drawing.Point(23, 257);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(269, 139);
+            this.groupBox1.Size = new System.Drawing.Size(300, 139);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "GİRİŞ BİLGİLERİ";
@@ -171,33 +183,33 @@ namespace Eczane_Otomasyonu
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 90);
+            this.label5.Location = new System.Drawing.Point(18, 90);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 17);
+            this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 12;
             this.label5.Text = "Parola";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 55);
+            this.label4.Location = new System.Drawing.Point(18, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 17);
+            this.label4.Size = new System.Drawing.Size(99, 20);
             this.label4.TabIndex = 11;
             this.label4.Text = "Kullanıcı adı";
             // 
             // TbParola
             // 
-            this.TbParola.Location = new System.Drawing.Point(108, 90);
+            this.TbParola.Location = new System.Drawing.Point(140, 90);
             this.TbParola.Name = "TbParola";
-            this.TbParola.Size = new System.Drawing.Size(100, 22);
+            this.TbParola.Size = new System.Drawing.Size(154, 27);
             this.TbParola.TabIndex = 1;
             // 
             // TbKullanici
             // 
-            this.TbKullanici.Location = new System.Drawing.Point(108, 55);
+            this.TbKullanici.Location = new System.Drawing.Point(140, 28);
             this.TbKullanici.Name = "TbKullanici";
-            this.TbKullanici.Size = new System.Drawing.Size(100, 22);
+            this.TbKullanici.Size = new System.Drawing.Size(154, 27);
             this.TbKullanici.TabIndex = 0;
             // 
             // groupBox2
@@ -208,19 +220,31 @@ namespace Eczane_Otomasyonu
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(518, 248);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox2.Location = new System.Drawing.Point(487, 257);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(256, 139);
+            this.groupBox2.Size = new System.Drawing.Size(287, 139);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "KİŞİ BİLGİLERİ";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(329, 306);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(152, 172);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // PersonelEkran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(789, 529);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnGeri);
@@ -228,6 +252,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.BtnGüncelle);
             this.Controls.Add(this.BtnSil);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PersonelEkran";
             this.Text = "PERSONEL BİLGİLERİ";
             this.Load += new System.EventHandler(this.PersonelEkran_Load);
@@ -236,6 +261,7 @@ namespace Eczane_Otomasyonu
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,5 +285,6 @@ namespace Eczane_Otomasyonu
         private System.Windows.Forms.TextBox TbParola;
         private System.Windows.Forms.TextBox TbKullanici;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

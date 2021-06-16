@@ -87,10 +87,14 @@ namespace Eczane_Otomasyonu
             // 
             // btnGiris
             // 
-            this.btnGiris.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnGiris.Location = new System.Drawing.Point(334, 172);
+            this.btnGiris.BackColor = System.Drawing.Color.Transparent;
+            this.btnGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGiris.ForeColor = System.Drawing.Color.Transparent;
+            this.btnGiris.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnGiris.Location = new System.Drawing.Point(381, 200);
             this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(132, 67);
+            this.btnGiris.Size = new System.Drawing.Size(141, 67);
             this.btnGiris.TabIndex = 6;
             this.btnGiris.Text = "Giriş";
             this.btnGiris.UseVisualStyleBackColor = false;
@@ -100,6 +104,7 @@ namespace Eczane_Otomasyonu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(555, 288);
@@ -109,6 +114,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.label);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TbKullaniciadi);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "ECZANE GİRİŞ SİSTEMİ";
             this.Load += new System.EventHandler(this.Form1_Load);

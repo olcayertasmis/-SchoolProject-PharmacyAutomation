@@ -76,9 +76,10 @@ namespace Eczane_Otomasyonu
             // lblFiyat
             // 
             this.lblFiyat.AutoSize = true;
+            this.lblFiyat.BackColor = System.Drawing.Color.Transparent;
             this.lblFiyat.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
-            this.lblFiyat.ForeColor = System.Drawing.Color.Cornsilk;
-            this.lblFiyat.Location = new System.Drawing.Point(148, 277);
+            this.lblFiyat.ForeColor = System.Drawing.Color.Black;
+            this.lblFiyat.Location = new System.Drawing.Point(92, 223);
             this.lblFiyat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFiyat.Name = "lblFiyat";
             this.lblFiyat.Size = new System.Drawing.Size(18, 19);
@@ -88,9 +89,10 @@ namespace Eczane_Otomasyonu
             // label23
             // 
             this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Comic Sans MS", 8.25F);
-            this.label23.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label23.Location = new System.Drawing.Point(89, 277);
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(21, 223);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(51, 19);
@@ -99,13 +101,14 @@ namespace Eczane_Otomasyonu
             // 
             // BtnSepetEkle
             // 
-            this.BtnSepetEkle.BackColor = System.Drawing.Color.IndianRed;
+            this.BtnSepetEkle.BackColor = System.Drawing.Color.Transparent;
             this.BtnSepetEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSepetEkle.ForeColor = System.Drawing.Color.White;
-            this.BtnSepetEkle.Location = new System.Drawing.Point(84, 313);
+            this.BtnSepetEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnSepetEkle.ForeColor = System.Drawing.Color.Black;
+            this.BtnSepetEkle.Location = new System.Drawing.Point(25, 280);
             this.BtnSepetEkle.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSepetEkle.Name = "BtnSepetEkle";
-            this.BtnSepetEkle.Size = new System.Drawing.Size(135, 36);
+            this.BtnSepetEkle.Size = new System.Drawing.Size(144, 36);
             this.BtnSepetEkle.TabIndex = 101;
             this.BtnSepetEkle.Text = "Sepete Ekle";
             this.BtnSepetEkle.UseVisualStyleBackColor = false;
@@ -113,7 +116,7 @@ namespace Eczane_Otomasyonu
             // 
             // TbSoyad
             // 
-            this.TbSoyad.Location = new System.Drawing.Point(848, 107);
+            this.TbSoyad.Location = new System.Drawing.Point(831, 75);
             this.TbSoyad.Margin = new System.Windows.Forms.Padding(4);
             this.TbSoyad.Name = "TbSoyad";
             this.TbSoyad.Size = new System.Drawing.Size(112, 22);
@@ -121,7 +124,7 @@ namespace Eczane_Otomasyonu
             // 
             // TbAd
             // 
-            this.TbAd.Location = new System.Drawing.Point(613, 107);
+            this.TbAd.Location = new System.Drawing.Point(596, 75);
             this.TbAd.Margin = new System.Windows.Forms.Padding(4);
             this.TbAd.Name = "TbAd";
             this.TbAd.Size = new System.Drawing.Size(112, 22);
@@ -130,9 +133,10 @@ namespace Eczane_Otomasyonu
             // label18
             // 
             this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.label18.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label18.Location = new System.Drawing.Point(995, 106);
+            this.label18.ForeColor = System.Drawing.Color.Black;
+            this.label18.Location = new System.Drawing.Point(978, 74);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(38, 24);
@@ -142,9 +146,10 @@ namespace Eczane_Otomasyonu
             // lblSoyad
             // 
             this.lblSoyad.AutoSize = true;
+            this.lblSoyad.BackColor = System.Drawing.Color.Transparent;
             this.lblSoyad.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.lblSoyad.ForeColor = System.Drawing.Color.Cornsilk;
-            this.lblSoyad.Location = new System.Drawing.Point(765, 106);
+            this.lblSoyad.ForeColor = System.Drawing.Color.Black;
+            this.lblSoyad.Location = new System.Drawing.Point(748, 74);
             this.lblSoyad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSoyad.Name = "lblSoyad";
             this.lblSoyad.Size = new System.Drawing.Size(69, 24);
@@ -154,9 +159,10 @@ namespace Eczane_Otomasyonu
             // lblAd
             // 
             this.lblAd.AutoSize = true;
+            this.lblAd.BackColor = System.Drawing.Color.Transparent;
             this.lblAd.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.lblAd.ForeColor = System.Drawing.Color.Cornsilk;
-            this.lblAd.Location = new System.Drawing.Point(547, 106);
+            this.lblAd.ForeColor = System.Drawing.Color.Black;
+            this.lblAd.Location = new System.Drawing.Point(530, 74);
             this.lblAd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(43, 24);
@@ -166,24 +172,26 @@ namespace Eczane_Otomasyonu
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.label15.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label15.Location = new System.Drawing.Point(815, 60);
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(798, 28);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(127, 24);
+            this.label15.Size = new System.Drawing.Size(153, 29);
             this.label15.TabIndex = 90;
             this.label15.Text = "Müşteri Bilgisi";
             // 
             // BtnListeSil
             // 
-            this.BtnListeSil.BackColor = System.Drawing.Color.IndianRed;
+            this.BtnListeSil.BackColor = System.Drawing.Color.Transparent;
             this.BtnListeSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnListeSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnListeSil.ForeColor = System.Drawing.Color.White;
-            this.BtnListeSil.Location = new System.Drawing.Point(742, 524);
+            this.BtnListeSil.Location = new System.Drawing.Point(547, 532);
             this.BtnListeSil.Margin = new System.Windows.Forms.Padding(4);
             this.BtnListeSil.Name = "BtnListeSil";
-            this.BtnListeSil.Size = new System.Drawing.Size(178, 53);
+            this.BtnListeSil.Size = new System.Drawing.Size(242, 53);
             this.BtnListeSil.TabIndex = 89;
             this.BtnListeSil.Text = "Listeyi Sil";
             this.BtnListeSil.UseVisualStyleBackColor = false;
@@ -192,9 +200,10 @@ namespace Eczane_Otomasyonu
             // lblToplamFiyat
             // 
             this.lblToplamFiyat.AutoSize = true;
+            this.lblToplamFiyat.BackColor = System.Drawing.Color.Transparent;
             this.lblToplamFiyat.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.lblToplamFiyat.ForeColor = System.Drawing.Color.Cornsilk;
-            this.lblToplamFiyat.Location = new System.Drawing.Point(234, 524);
+            this.lblToplamFiyat.ForeColor = System.Drawing.Color.Black;
+            this.lblToplamFiyat.Location = new System.Drawing.Point(306, 553);
             this.lblToplamFiyat.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblToplamFiyat.Name = "lblToplamFiyat";
             this.lblToplamFiyat.Size = new System.Drawing.Size(21, 24);
@@ -204,9 +213,10 @@ namespace Eczane_Otomasyonu
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.label13.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label13.Location = new System.Drawing.Point(301, 524);
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(373, 553);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(32, 24);
@@ -216,9 +226,10 @@ namespace Eczane_Otomasyonu
             // label12
             // 
             this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.label12.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label12.Location = new System.Drawing.Point(78, 524);
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(150, 553);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(126, 24);
@@ -228,12 +239,13 @@ namespace Eczane_Otomasyonu
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.label11.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label11.Location = new System.Drawing.Point(361, 360);
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.ForeColor = System.Drawing.Color.Black;
+            this.label11.Location = new System.Drawing.Point(525, 349);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 24);
+            this.label11.Size = new System.Drawing.Size(153, 29);
             this.label11.TabIndex = 85;
             this.label11.Text = "Sipariş Listesi";
             // 
@@ -251,6 +263,7 @@ namespace Eczane_Otomasyonu
             // CbAdet
             // 
             this.CbAdet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbAdet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.CbAdet.FormattingEnabled = true;
             this.CbAdet.Items.AddRange(new object[] {
             "1",
@@ -263,22 +276,23 @@ namespace Eczane_Otomasyonu
             "8",
             "9",
             "10"});
-            this.CbAdet.Location = new System.Drawing.Point(84, 246);
+            this.CbAdet.Location = new System.Drawing.Point(25, 176);
             this.CbAdet.Margin = new System.Windows.Forms.Padding(4);
             this.CbAdet.Name = "CbAdet";
-            this.CbAdet.Size = new System.Drawing.Size(144, 24);
+            this.CbAdet.Size = new System.Drawing.Size(144, 28);
             this.CbAdet.TabIndex = 77;
             this.CbAdet.SelectedIndexChanged += new System.EventHandler(this.CbAdet_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.label7.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label7.Location = new System.Drawing.Point(104, 219);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(20, 126);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(66, 24);
+            this.label7.Size = new System.Drawing.Size(78, 29);
             this.label7.TabIndex = 76;
             this.label7.Text = "Miktar";
             // 
@@ -286,35 +300,38 @@ namespace Eczane_Otomasyonu
             // 
             this.Cb_ilac.BackColor = System.Drawing.SystemColors.Window;
             this.Cb_ilac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Cb_ilac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Cb_ilac.FormattingEnabled = true;
-            this.Cb_ilac.Location = new System.Drawing.Point(84, 169);
+            this.Cb_ilac.Location = new System.Drawing.Point(25, 71);
             this.Cb_ilac.Margin = new System.Windows.Forms.Padding(4);
             this.Cb_ilac.Name = "Cb_ilac";
-            this.Cb_ilac.Size = new System.Drawing.Size(144, 24);
+            this.Cb_ilac.Size = new System.Drawing.Size(144, 28);
             this.Cb_ilac.TabIndex = 73;
             this.Cb_ilac.SelectedIndexChanged += new System.EventHandler(this.Cb_ilac_SelectedIndexChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12.25F);
-            this.label5.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label5.Location = new System.Drawing.Point(79, 120);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(20, 23);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 29);
+            this.label5.Size = new System.Drawing.Size(127, 29);
             this.label5.TabIndex = 71;
             this.label5.Text = "İlaç Seçiniz";
             // 
             // BtnSatisYap
             // 
-            this.BtnSatisYap.BackColor = System.Drawing.Color.IndianRed;
+            this.BtnSatisYap.BackColor = System.Drawing.Color.Transparent;
             this.BtnSatisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSatisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnSatisYap.ForeColor = System.Drawing.Color.White;
-            this.BtnSatisYap.Location = new System.Drawing.Point(962, 524);
+            this.BtnSatisYap.Location = new System.Drawing.Point(813, 532);
             this.BtnSatisYap.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSatisYap.Name = "BtnSatisYap";
-            this.BtnSatisYap.Size = new System.Drawing.Size(184, 53);
+            this.BtnSatisYap.Size = new System.Drawing.Size(248, 53);
             this.BtnSatisYap.TabIndex = 63;
             this.BtnSatisYap.Text = "Siparişi Tamamla";
             this.BtnSatisYap.UseVisualStyleBackColor = false;
@@ -322,21 +339,24 @@ namespace Eczane_Otomasyonu
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(252, 73);
+            this.pictureBox2.Location = new System.Drawing.Point(218, 28);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(279, 276);
+            this.pictureBox2.Size = new System.Drawing.Size(279, 289);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 59;
             this.pictureBox2.TabStop = false;
             // 
             // BtnMusteriKaydet
             // 
-            this.BtnMusteriKaydet.BackColor = System.Drawing.Color.IndianRed;
-            this.BtnMusteriKaydet.Location = new System.Drawing.Point(1051, 203);
+            this.BtnMusteriKaydet.BackColor = System.Drawing.Color.Transparent;
+            this.BtnMusteriKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMusteriKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnMusteriKaydet.Location = new System.Drawing.Point(1034, 171);
             this.BtnMusteriKaydet.Name = "BtnMusteriKaydet";
-            this.BtnMusteriKaydet.Size = new System.Drawing.Size(122, 40);
+            this.BtnMusteriKaydet.Size = new System.Drawing.Size(122, 49);
             this.BtnMusteriKaydet.TabIndex = 105;
             this.BtnMusteriKaydet.Text = "Müşteri Kaydet";
             this.BtnMusteriKaydet.UseVisualStyleBackColor = false;
@@ -344,7 +364,7 @@ namespace Eczane_Otomasyonu
             // 
             // TbAdres
             // 
-            this.TbAdres.Location = new System.Drawing.Point(848, 167);
+            this.TbAdres.Location = new System.Drawing.Point(831, 135);
             this.TbAdres.Margin = new System.Windows.Forms.Padding(4);
             this.TbAdres.Name = "TbAdres";
             this.TbAdres.Size = new System.Drawing.Size(112, 22);
@@ -352,7 +372,7 @@ namespace Eczane_Otomasyonu
             // 
             // TbTel
             // 
-            this.TbTel.Location = new System.Drawing.Point(613, 167);
+            this.TbTel.Location = new System.Drawing.Point(596, 135);
             this.TbTel.Margin = new System.Windows.Forms.Padding(4);
             this.TbTel.MaxLength = 10;
             this.TbTel.Name = "TbTel";
@@ -363,9 +383,10 @@ namespace Eczane_Otomasyonu
             // lblAdres
             // 
             this.lblAdres.AutoSize = true;
+            this.lblAdres.BackColor = System.Drawing.Color.Transparent;
             this.lblAdres.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.lblAdres.ForeColor = System.Drawing.Color.Cornsilk;
-            this.lblAdres.Location = new System.Drawing.Point(765, 166);
+            this.lblAdres.ForeColor = System.Drawing.Color.Black;
+            this.lblAdres.Location = new System.Drawing.Point(748, 134);
             this.lblAdres.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdres.Name = "lblAdres";
             this.lblAdres.Size = new System.Drawing.Size(67, 24);
@@ -375,9 +396,10 @@ namespace Eczane_Otomasyonu
             // lblTel
             // 
             this.lblTel.AutoSize = true;
+            this.lblTel.BackColor = System.Drawing.Color.Transparent;
             this.lblTel.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.lblTel.ForeColor = System.Drawing.Color.Cornsilk;
-            this.lblTel.Location = new System.Drawing.Point(547, 166);
+            this.lblTel.ForeColor = System.Drawing.Color.Black;
+            this.lblTel.Location = new System.Drawing.Point(530, 134);
             this.lblTel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTel.Name = "lblTel";
             this.lblTel.Size = new System.Drawing.Size(42, 24);
@@ -386,12 +408,13 @@ namespace Eczane_Otomasyonu
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.LbAdet);
             this.groupBox1.Controls.Add(this.LbFiyat);
             this.groupBox1.Controls.Add(this.LbTuketim);
             this.groupBox1.Controls.Add(this.LbUretim);
             this.groupBox1.Controls.Add(this.LbAd);
-            this.groupBox1.Location = new System.Drawing.Point(79, 363);
+            this.groupBox1.Location = new System.Drawing.Point(154, 381);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(907, 136);
             this.groupBox1.TabIndex = 110;
@@ -445,9 +468,10 @@ namespace Eczane_Otomasyonu
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.label3.ForeColor = System.Drawing.Color.Cornsilk;
-            this.label3.Location = new System.Drawing.Point(196, 274);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(137, 219);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 24);
@@ -456,7 +480,7 @@ namespace Eczane_Otomasyonu
             // 
             // TbTcEkle
             // 
-            this.TbTcEkle.Location = new System.Drawing.Point(613, 222);
+            this.TbTcEkle.Location = new System.Drawing.Point(596, 190);
             this.TbTcEkle.Margin = new System.Windows.Forms.Padding(4);
             this.TbTcEkle.MaxLength = 11;
             this.TbTcEkle.Name = "TbTcEkle";
@@ -467,9 +491,10 @@ namespace Eczane_Otomasyonu
             // lblTc
             // 
             this.lblTc.AutoSize = true;
+            this.lblTc.BackColor = System.Drawing.Color.Transparent;
             this.lblTc.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.lblTc.ForeColor = System.Drawing.Color.Cornsilk;
-            this.lblTc.Location = new System.Drawing.Point(548, 220);
+            this.lblTc.ForeColor = System.Drawing.Color.Black;
+            this.lblTc.Location = new System.Drawing.Point(531, 188);
             this.lblTc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTc.Name = "lblTc";
             this.lblTc.Size = new System.Drawing.Size(36, 24);
@@ -478,10 +503,12 @@ namespace Eczane_Otomasyonu
             // 
             // BtnIptal
             // 
-            this.BtnIptal.BackColor = System.Drawing.Color.IndianRed;
-            this.BtnIptal.Location = new System.Drawing.Point(1051, 256);
+            this.BtnIptal.BackColor = System.Drawing.Color.Transparent;
+            this.BtnIptal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIptal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnIptal.Location = new System.Drawing.Point(1034, 224);
             this.BtnIptal.Name = "BtnIptal";
-            this.BtnIptal.Size = new System.Drawing.Size(122, 40);
+            this.BtnIptal.Size = new System.Drawing.Size(122, 49);
             this.BtnIptal.TabIndex = 114;
             this.BtnIptal.Text = "İptal";
             this.BtnIptal.UseVisualStyleBackColor = false;
@@ -493,7 +520,7 @@ namespace Eczane_Otomasyonu
             this.Cb_islem.Items.AddRange(new object[] {
             "Ekle",
             "Güncelle"});
-            this.Cb_islem.Location = new System.Drawing.Point(1052, 166);
+            this.Cb_islem.Location = new System.Drawing.Point(1035, 134);
             this.Cb_islem.Name = "Cb_islem";
             this.Cb_islem.Size = new System.Drawing.Size(121, 24);
             this.Cb_islem.TabIndex = 115;
@@ -501,7 +528,7 @@ namespace Eczane_Otomasyonu
             // 
             // TbTc
             // 
-            this.TbTc.Location = new System.Drawing.Point(1052, 109);
+            this.TbTc.Location = new System.Drawing.Point(1035, 77);
             this.TbTc.Margin = new System.Windows.Forms.Padding(4);
             this.TbTc.MaxLength = 11;
             this.TbTc.Name = "TbTc";
@@ -513,9 +540,10 @@ namespace Eczane_Otomasyonu
             // lbl_islem
             // 
             this.lbl_islem.AutoSize = true;
+            this.lbl_islem.BackColor = System.Drawing.Color.Transparent;
             this.lbl_islem.Font = new System.Drawing.Font("Comic Sans MS", 10.25F);
-            this.lbl_islem.ForeColor = System.Drawing.Color.Cornsilk;
-            this.lbl_islem.Location = new System.Drawing.Point(976, 165);
+            this.lbl_islem.ForeColor = System.Drawing.Color.Black;
+            this.lbl_islem.Location = new System.Drawing.Point(959, 133);
             this.lbl_islem.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_islem.Name = "lbl_islem";
             this.lbl_islem.Size = new System.Drawing.Size(63, 24);
@@ -524,8 +552,10 @@ namespace Eczane_Otomasyonu
             // 
             // BtnMusteriGüncelle
             // 
-            this.BtnMusteriGüncelle.BackColor = System.Drawing.Color.IndianRed;
-            this.BtnMusteriGüncelle.Location = new System.Drawing.Point(998, 150);
+            this.BtnMusteriGüncelle.BackColor = System.Drawing.Color.Transparent;
+            this.BtnMusteriGüncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnMusteriGüncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.BtnMusteriGüncelle.Location = new System.Drawing.Point(981, 118);
             this.BtnMusteriGüncelle.Name = "BtnMusteriGüncelle";
             this.BtnMusteriGüncelle.Size = new System.Drawing.Size(175, 40);
             this.BtnMusteriGüncelle.TabIndex = 118;
@@ -538,6 +568,8 @@ namespace Eczane_Otomasyonu
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1181, 598);
             this.Controls.Add(this.BtnMusteriGüncelle);
             this.Controls.Add(this.lbl_islem);
@@ -573,6 +605,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.label5);
             this.Controls.Add(this.BtnSatisYap);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EczaneOtomasyon";
             this.Text = "ECZANE SATIŞ SİSTEMİ";
             this.Load += new System.EventHandler(this.EczaneOtomasyon_Load);

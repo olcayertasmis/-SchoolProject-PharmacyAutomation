@@ -47,5 +47,10 @@ namespace Eczane_Otomasyonu
             ReportingSystem RaporForm = new ReportingSystem();
             RaporForm.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
