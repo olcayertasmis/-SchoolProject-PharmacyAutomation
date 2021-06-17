@@ -108,6 +108,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EczaneOtomasyonDBDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="EczaneOtomasyonDBDataSet3.cs">
+      <DependentUpon>EczaneOtomasyonDBDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EczaneOtomasyonDBDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -311,8 +314,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resimler\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

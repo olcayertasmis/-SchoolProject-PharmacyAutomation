@@ -47,7 +47,7 @@ namespace Eczane_Otomasyonu
             this.BtnLog.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.BtnLog.Location = new System.Drawing.Point(12, 63);
             this.BtnLog.Name = "BtnLog";
-            this.BtnLog.Size = new System.Drawing.Size(319, 63);
+            this.BtnLog.Size = new System.Drawing.Size(347, 63);
             this.BtnLog.TabIndex = 0;
             this.BtnLog.Text = "Log Kayıtları";
             this.BtnLog.UseVisualStyleBackColor = false;
@@ -62,7 +62,7 @@ namespace Eczane_Otomasyonu
             this.BtnIlac.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.BtnIlac.Location = new System.Drawing.Point(12, 149);
             this.BtnIlac.Name = "BtnIlac";
-            this.BtnIlac.Size = new System.Drawing.Size(319, 62);
+            this.BtnIlac.Size = new System.Drawing.Size(347, 62);
             this.BtnIlac.TabIndex = 1;
             this.BtnIlac.Text = "İlaç Bilgileri";
             this.BtnIlac.UseVisualStyleBackColor = false;
@@ -77,7 +77,7 @@ namespace Eczane_Otomasyonu
             this.BtnHasta.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.BtnHasta.Location = new System.Drawing.Point(12, 237);
             this.BtnHasta.Name = "BtnHasta";
-            this.BtnHasta.Size = new System.Drawing.Size(319, 65);
+            this.BtnHasta.Size = new System.Drawing.Size(347, 65);
             this.BtnHasta.TabIndex = 2;
             this.BtnHasta.Text = "Hasta Bilgileri";
             this.BtnHasta.UseVisualStyleBackColor = false;
@@ -105,7 +105,7 @@ namespace Eczane_Otomasyonu
             this.BtnPersonel.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.BtnPersonel.Location = new System.Drawing.Point(12, 328);
             this.BtnPersonel.Name = "BtnPersonel";
-            this.BtnPersonel.Size = new System.Drawing.Size(319, 69);
+            this.BtnPersonel.Size = new System.Drawing.Size(347, 69);
             this.BtnPersonel.TabIndex = 4;
             this.BtnPersonel.Text = "Personel Bilgileri";
             this.BtnPersonel.UseVisualStyleBackColor = false;
@@ -121,7 +121,7 @@ namespace Eczane_Otomasyonu
             this.BtnRaporla.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.BtnRaporla.Location = new System.Drawing.Point(12, 421);
             this.BtnRaporla.Name = "BtnRaporla";
-            this.BtnRaporla.Size = new System.Drawing.Size(319, 69);
+            this.BtnRaporla.Size = new System.Drawing.Size(347, 69);
             this.BtnRaporla.TabIndex = 5;
             this.BtnRaporla.Text = "Rapor Ve İstatistikler";
             this.BtnRaporla.UseVisualStyleBackColor = false;
@@ -133,7 +133,7 @@ namespace Eczane_Otomasyonu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(343, 500);
+            this.ClientSize = new System.Drawing.Size(371, 500);
             this.Controls.Add(this.BtnRaporla);
             this.Controls.Add(this.BtnPersonel);
             this.Controls.Add(this.label1);

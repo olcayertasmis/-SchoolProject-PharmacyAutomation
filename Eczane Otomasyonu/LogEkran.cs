@@ -16,10 +16,10 @@ namespace Eczane_Otomasyonu
         public LogEkran()
         {
             InitializeComponent();
-            SqlConnection con = new SqlConnection("Data Source=DESKTOP-S6ARGM7;Initial Catalog=EczaneOtomasyonDB;Integrated Security=True;MultipleActiveResultSets=True");
+            Database db = new Database();
             SqlCommand cmd = new SqlCommand();
-            con.Open();
-            cmd.Connection = con;
+            db.baglanti.Open();
+            cmd.Connection = db.baglanti;
             cmd.CommandText = "SELECT * FROM Log";
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
@@ -31,7 +31,7 @@ namespace Eczane_Otomasyonu
             }
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        private void LogEkran_Load(object sender, EventArgs e)
         {
 
         }
