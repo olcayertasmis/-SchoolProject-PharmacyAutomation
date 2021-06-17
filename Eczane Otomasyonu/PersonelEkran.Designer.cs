@@ -254,6 +254,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PersonelEkran";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PERSONEL BİLGİLERİ";
             this.Load += new System.EventHandler(this.PersonelEkran_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -88,6 +88,8 @@ namespace Eczane_Otomasyonu
             // btnGiris
             // 
             this.btnGiris.BackColor = System.Drawing.Color.Transparent;
+            this.btnGiris.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnGiris.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnGiris.ForeColor = System.Drawing.Color.Transparent;
@@ -116,6 +118,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.TbKullaniciadi);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ECZANE GİRİŞ SİSTEMİ";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

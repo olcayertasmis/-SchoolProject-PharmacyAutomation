@@ -76,9 +76,9 @@ namespace Eczane_Otomasyonu
             // 
             this.BtnKaydet.BackColor = System.Drawing.Color.IndianRed;
             this.BtnKaydet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnKaydet.Location = new System.Drawing.Point(681, 572);
+            this.BtnKaydet.Location = new System.Drawing.Point(681, 599);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(170, 77);
+            this.BtnKaydet.Size = new System.Drawing.Size(170, 50);
             this.BtnKaydet.TabIndex = 18;
             this.BtnKaydet.Text = "KAYDET";
             this.BtnKaydet.UseVisualStyleBackColor = false;
@@ -88,9 +88,9 @@ namespace Eczane_Otomasyonu
             // 
             this.BtnGüncelle.BackColor = System.Drawing.Color.IndianRed;
             this.BtnGüncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnGüncelle.Location = new System.Drawing.Point(501, 572);
+            this.BtnGüncelle.Location = new System.Drawing.Point(501, 599);
             this.BtnGüncelle.Name = "BtnGüncelle";
-            this.BtnGüncelle.Size = new System.Drawing.Size(174, 77);
+            this.BtnGüncelle.Size = new System.Drawing.Size(174, 50);
             this.BtnGüncelle.TabIndex = 17;
             this.BtnGüncelle.Text = "GÜNCELLE";
             this.BtnGüncelle.UseVisualStyleBackColor = false;
@@ -100,9 +100,9 @@ namespace Eczane_Otomasyonu
             // 
             this.BtnSil.BackColor = System.Drawing.Color.IndianRed;
             this.BtnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnSil.Location = new System.Drawing.Point(201, 572);
+            this.BtnSil.Location = new System.Drawing.Point(201, 599);
             this.BtnSil.Name = "BtnSil";
-            this.BtnSil.Size = new System.Drawing.Size(183, 77);
+            this.BtnSil.Size = new System.Drawing.Size(183, 50);
             this.BtnSil.TabIndex = 16;
             this.BtnSil.Text = "SİL";
             this.BtnSil.UseVisualStyleBackColor = false;
@@ -168,9 +168,9 @@ namespace Eczane_Otomasyonu
             // 
             this.BtnGeri.BackColor = System.Drawing.Color.IndianRed;
             this.BtnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnGeri.Location = new System.Drawing.Point(12, 572);
+            this.BtnGeri.Location = new System.Drawing.Point(12, 599);
             this.BtnGeri.Name = "BtnGeri";
-            this.BtnGeri.Size = new System.Drawing.Size(183, 77);
+            this.BtnGeri.Size = new System.Drawing.Size(183, 50);
             this.BtnGeri.TabIndex = 19;
             this.BtnGeri.Text = "GERİ";
             this.BtnGeri.UseVisualStyleBackColor = false;
@@ -239,7 +239,7 @@ namespace Eczane_Otomasyonu
             this.groupBox1.Controls.Add(this.CbilacTur);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.TbYenilac);
-            this.groupBox1.Location = new System.Drawing.Point(501, 320);
+            this.groupBox1.Location = new System.Drawing.Point(501, 347);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(350, 233);
             this.groupBox1.TabIndex = 26;
@@ -280,7 +280,7 @@ namespace Eczane_Otomasyonu
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 320);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 347);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(368, 233);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -330,6 +330,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IlacEkran";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "İLAÇ BİLGİLERİ";
             this.Load += new System.EventHandler(this.IlacEkran_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

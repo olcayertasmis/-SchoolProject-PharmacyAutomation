@@ -185,6 +185,8 @@ namespace Eczane_Otomasyonu
             // BtnListeSil
             // 
             this.BtnListeSil.BackColor = System.Drawing.Color.Transparent;
+            this.BtnListeSil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BtnListeSil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BtnListeSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnListeSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnListeSil.ForeColor = System.Drawing.Color.White;
@@ -325,6 +327,8 @@ namespace Eczane_Otomasyonu
             // BtnSatisYap
             // 
             this.BtnSatisYap.BackColor = System.Drawing.Color.Transparent;
+            this.BtnSatisYap.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BtnSatisYap.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BtnSatisYap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSatisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnSatisYap.ForeColor = System.Drawing.Color.White;
@@ -557,7 +561,7 @@ namespace Eczane_Otomasyonu
             this.BtnMusteriGüncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.BtnMusteriGüncelle.Location = new System.Drawing.Point(981, 118);
             this.BtnMusteriGüncelle.Name = "BtnMusteriGüncelle";
-            this.BtnMusteriGüncelle.Size = new System.Drawing.Size(175, 40);
+            this.BtnMusteriGüncelle.Size = new System.Drawing.Size(175, 61);
             this.BtnMusteriGüncelle.TabIndex = 118;
             this.BtnMusteriGüncelle.Text = "Müşteriyi Güncelle";
             this.BtnMusteriGüncelle.UseVisualStyleBackColor = false;
@@ -607,6 +611,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EczaneOtomasyon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ECZANE SATIŞ SİSTEMİ";
             this.Load += new System.EventHandler(this.EczaneOtomasyon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

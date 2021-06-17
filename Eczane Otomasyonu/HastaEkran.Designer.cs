@@ -241,6 +241,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HastaEkran";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MÜŞTERİ BİLGİLERİ";
             this.Load += new System.EventHandler(this.HastaEkran_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

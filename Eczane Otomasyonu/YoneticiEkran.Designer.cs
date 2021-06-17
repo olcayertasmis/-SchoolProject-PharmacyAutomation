@@ -142,6 +142,7 @@ namespace Eczane_Otomasyonu
             this.Controls.Add(this.BtnLog);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "YoneticiEkran";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YÖNETİCİ EKRANI";
             this.ResumeLayout(false);
             this.PerformLayout();
